@@ -4,8 +4,9 @@ import { useDeferredValue, useEffect, useMemo, useState } from "react";
 import type { Ajustes, Camara, Datos, Fila } from "@/lib/tipos";
 import { construirFilas, fechaMs, finMs, mensual, mesesEntre, progreso, restante, sueldoCategoria } from "@/lib/calculo";
 import { $, $corto, dec, fecha, int, plural } from "@/lib/formato";
+import { Calificador, DatosContacto, EstrellasResumen, promedio, useCalificaciones, type EstadoCalificaciones } from "./Calificar";
 
-type Orden = "vence" | "costo" | "asesores" | "apellido";
+type Orden = "vence" | "costo" | "asesores" | "mejor" | "peor" | "apellido";
 
 const normalizar = (s: string) =>
   s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
@@ -32,6 +33,7 @@ export default function Tablero({ datos }: { datos: Datos }) {
   const [ajustes, setAjustes] = useState<Ajustes>({ aguinaldo: false, cargasPatronales: 0 });
   const [abierto, setAbierto] = useState<string | null>(null);
   const qDiferida = useDeferredValue(q);
+  const calif = useCalificaciones();
 
   const deCamara = useMemo(() => filas.filter((f) => f.camara === camara), [filas, camara]);
   const distritos = useMemo(() => [...new Set(deCamara.map((f) => f.distrito))].sort((a, b) => a.localeCompare(b, "es")), [deCamara]);
@@ -50,9 +52,15 @@ export default function Tablero({ datos }: { datos: Datos }) {
       costo: (a, b) => mensual(b, ajustes) - mensual(a, ajustes) || a.apellido.localeCompare(b.apellido, "es"),
       asesores: (a, b) => b.asesores - a.asesores || a.apellido.localeCompare(b.apellido, "es"),
       apellido: (a, b) => a.apellido.localeCompare(b.apellido, "es"),
+      mejor: (a, b) => porNota(b) - porNota(a) || a.apellido.localeCompare(b.apellido, "es"),
+      peor: (a, b) => porNota(a, 6) - porNota(b, 6) || a.apellido.localeCompare(b.apellido, "es"),
     };
+    // Sin votos van al final en ambos órdenes
+    function porNota(f: Fila, sinVotos = -1) {
+      return promedio(calif.resumen[`${f.camara}:${f.id}`]) ?? sinVotos;
+    }
     return r.sort(cmp[orden]);
-  }, [deCamara, distrito, bloque, qDiferida, orden, ajustes]);
+  }, [deCamara, distrito, bloque, qDiferida, orden, ajustes, calif.resumen]);
 
   const resumen = useMemo(() => {
     const porCamara = (c: Camara) => {
@@ -172,6 +180,8 @@ export default function Tablero({ datos }: { datos: Datos }) {
               <option value="vence">Vence primero</option>
               <option value="costo">Más caro por mes</option>
               {camara === "senadores" && <option value="asesores">Más asesores</option>}
+              <option value="mejor">Mejor calificados</option>
+              <option value="peor">Peor calificados</option>
               <option value="apellido">Apellido</option>
             </select>
           </label>
@@ -207,6 +217,7 @@ export default function Tablero({ datos }: { datos: Datos }) {
               ahora={ahora}
               ajustes={ajustes}
               datos={datos}
+              calif={calif}
               abierto={abierto === f.camara + f.id}
               alternar={() => setAbierto((a) => (a === f.camara + f.id ? null : f.camara + f.id))}
             />
@@ -280,6 +291,7 @@ function FilaLegislador({
   ahora,
   ajustes,
   datos,
+  calif,
   abierto,
   alternar,
 }: {
@@ -287,6 +299,7 @@ function FilaLegislador({
   ahora: number;
   ajustes: Ajustes;
   datos: Datos;
+  calif: EstadoCalificaciones;
   abierto: boolean;
   alternar: () => void;
 }) {
@@ -321,6 +334,7 @@ function FilaLegislador({
             <span className="block truncate text-xs text-tinta-2">
               {f.distrito} · {f.bloque}
             </span>
+            <EstrellasResumen c={calif.resumen[`${f.camara}:${f.id}`]} />
           </span>
         </span>
 
@@ -355,12 +369,26 @@ function FilaLegislador({
         </span>
       </button>
 
-      {abierto && <Detalle id={panel} f={f} ahora={ahora} ajustes={ajustes} datos={datos} />}
+      {abierto && <Detalle id={panel} f={f} ahora={ahora} ajustes={ajustes} datos={datos} calif={calif} />}
     </li>
   );
 }
 
-function Detalle({ id, f, ahora, ajustes, datos }: { id: string; f: Fila; ahora: number; ajustes: Ajustes; datos: Datos }) {
+function Detalle({
+  id,
+  f,
+  ahora,
+  ajustes,
+  datos,
+  calif,
+}: {
+  id: string;
+  f: Fila;
+  ahora: number;
+  ajustes: Ajustes;
+  datos: Datos;
+  calif: EstadoCalificaciones;
+}) {
   const inicio = fechaMs(f.inicio);
   const fin = finMs(f.fin);
   const m = mensual(f, ajustes);
@@ -376,6 +404,16 @@ function Detalle({ id, f, ahora, ajustes, datos }: { id: string; f: Fila; ahora:
 
   return (
     <div id={id} className="grid gap-6 bg-papel-2/50 px-4 py-5 text-sm sm:px-6 md:grid-cols-2">
+      <div className="grid gap-6 border-b border-regla pb-6 md:col-span-2 md:grid-cols-2">
+        <div>
+          <h3 className="mb-2 text-xs font-medium tracking-wide text-tinta-2 uppercase">Calificá su gestión</h3>
+          <Calificador clave={`${f.camara}:${f.id}`} nombre={`${f.nombre} ${f.apellido}`} estado={calif} />
+        </div>
+        <div>
+          <h3 className="mb-2 text-xs font-medium tracking-wide text-tinta-2 uppercase">Contacto</h3>
+          <DatosContacto c={f.contacto} />
+        </div>
+      </div>
       <div>
         <h3 className="mb-2 text-xs font-medium tracking-wide text-tinta-2 uppercase">Costo mensual</h3>
         <dl className="divide-y divide-regla">
@@ -549,6 +587,15 @@ function Metodologia({ datos }: { datos: Datos }) {
             <strong className="text-tinta">Asesores de diputados.</strong> HCDN no publica el personal por
             despacho. Se usa el personal de planta «afectado a bloque político» de la nómina oficial, repartido en
             partes iguales entre los diputados. No incluye contratados.
+          </p>
+          <p>
+            <strong className="text-tinta">Calificaciones.</strong> Son opiniones anónimas de quienes visitan
+            el sitio, no una encuesta representativa. Se permite un voto por persona y legislador (se puede
+            cambiar) y hay límites por conexión para evitar votos masivos.
+          </p>
+          <p>
+            <strong className="text-tinta">Contacto y redes.</strong> Los publica cada Cámara en la página
+            oficial de cada legislador; si un despacho no los cargó, no aparecen.
           </p>
           <p>
             <strong className="text-tinta">Lo que no incluye.</strong> Pasajes, viáticos, gastos de funcionamiento

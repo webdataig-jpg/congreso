@@ -5,6 +5,16 @@ export interface Fuente {
   url: string | null;
 }
 
+export interface Contacto {
+  email: string | null;
+  telefono: string | null;
+  oficina: string | null;
+  redes: { red: string; url: string }[];
+  perfil: string;
+  despacho?: string;
+  revisado?: string | null;
+}
+
 export interface LegisladorBase {
   id: string;
   apellido: string;
@@ -14,11 +24,12 @@ export interface LegisladorBase {
   inicioMandato: string;
   inicio: string;
   fin: string;
+  foto?: string | null;
+  contacto?: Contacto | null;
 }
 
 export interface Senador extends LegisladorBase {
   partido: string;
-  foto: string | null;
   personal: { total: number; categorias: Categorias } | null;
 }
 
@@ -58,10 +69,16 @@ export interface Fila {
   inicio: string;
   fin: string;
   foto: string | null;
+  contacto: Contacto | null;
   asesores: number;
   asesoresEstimado: boolean;
   categorias: Categorias | null;
   dietaMensual: number;
   dietaDetalle: { concepto: string; importe: number }[];
   asesoresMensual: number;
+}
+
+export interface Calificacion {
+  suma: number;
+  cant: number;
 }

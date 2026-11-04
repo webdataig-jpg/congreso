@@ -24,10 +24,16 @@ async function get(url, { tries = 3, timeout = 30000 } = {}) {
   for (let i = 0; i < tries; i++) {
     try {
       const res = await fetch(url, { headers: { "User-Agent": UA }, signal: AbortSignal.timeout(timeout) });
-      if (!res.ok) throw new Error(`HTTP ${res.status} ${url}`);
+      if (!res.ok) {
+        const e = new Error(`HTTP ${res.status} ${url}`);
+        e.status = res.status;
+        throw e;
+      }
       return await res.text();
     } catch (e) {
       err = e;
+      // Si el sitio nos frena, no insistir
+      if (e.status === 403 || e.status === 429 || e.status === 404) break;
       await new Promise((r) => setTimeout(r, 800 * (i + 1)));
     }
   }
@@ -152,11 +158,118 @@ async function diputados() {
       };
     });
     if (lista.length < 200) throw new Error(`solo ${lista.length} diputados`);
+    await contactosDiputados(lista);
     return { lista, actualizado, url };
   } catch (err) {
     avisos.push(`Diputados: se usó la copia local (${err.message})`);
     return previo?.diputados ?? { lista: [], actualizado: null, url: null };
   }
+}
+
+// ---------- Contacto y redes ----------
+const REDES = [
+  [/instagram\.com/i, "Instagram"],
+  [/(twitter|x)\.com/i, "X"],
+  [/facebook\.com|fb\.com/i, "Facebook"],
+  [/youtube\.com|youtu\.be/i, "YouTube"],
+  [/tiktok\.com/i, "TikTok"],
+  [/linkedin\.com/i, "LinkedIn"],
+  [/threads\.(net|com)/i, "Threads"],
+];
+
+function redes(urls) {
+  const out = [];
+  const vistos = new Set();
+  for (let u of urls) {
+    u = (u || "").trim();
+    if (!/^https?:\/\/[^\s]+\.[^\s]+/i.test(u)) continue;
+    const red = REDES.find(([re]) => re.test(u))?.[1] ?? "Web";
+    if (vistos.has(red)) continue;
+    vistos.add(red);
+    out.push({ red, url: u });
+  }
+  return out;
+}
+
+const textoLimpio = (s) => s.replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/\s+/g, " ").trim();
+
+const esperar = (ms) => new Promise((r) => setTimeout(r, ms));
+// Cuántas páginas de diputados se revisan por corrida, y cada cuánto se refresca un contacto
+const CONTACTOS_MAX = Number(process.env.CONTACTOS_MAX ?? 40);
+const CONTACTOS_PAUSA_MS = 1500;
+const CONTACTOS_VIGENCIA_DIAS = 30;
+
+async function contactoDiputado(slugHcdn) {
+  const base = `https://www.hcdn.gob.ar/diputados/${slugHcdn}/`;
+  const index = await get(base, { tries: 1 });
+  const email = index.match(/href="mailto:([^"]+)"/i)?.[1]?.toLowerCase() ?? null;
+  const i = index.indexOf("Redes Sociales:");
+  const bloqueRedes = i > 0 ? index.slice(i, index.indexOf("</p>", i)) : "";
+  const urls = [...bloqueRedes.matchAll(/href=['"]([^'"]+)['"]/g)].map((m) => m[1]);
+  const j = index.indexOf("Ubicación de Oficina:");
+  const oficina = j > 0 ? textoLimpio(index.slice(j + 21, index.indexOf("</p>", j))).replace(/^<?\/?strong>?/, "").trim() || null : null;
+  return {
+    email,
+    telefono: null,
+    oficina,
+    redes: redes(urls),
+    perfil: base,
+    despacho: `${base}jefe-despacho.html`,
+    revisado: new Date().toISOString().slice(0, 10),
+  };
+}
+
+async function contactosDiputados(lista) {
+  const previos = new Map((previo?.diputados?.lista ?? []).map((d) => [d.id, d]));
+  let indice;
+  try {
+    const html = await get("https://www.hcdn.gob.ar/diputados/");
+    indice = new Map();
+    for (const m of html.matchAll(/<tr>\s*<td><img src="([^"]*)"[^>]*><\/td>\s*<td>\s*<a href="\/diputados\/([^/"]+)\/">\s*([^<]+?)\s*<\/a>/g)) {
+      indice.set(slug(m[3].replace(",", " ")), { foto: m[1], slugHcdn: m[2] });
+    }
+    if (indice.size < 200) throw new Error(`listado con ${indice.size} filas`);
+  } catch (e) {
+    avisos.push(`Contactos de diputados: se usó la copia local (${e.message})`);
+    for (const d of lista) Object.assign(d, { foto: previos.get(d.id)?.foto ?? null, contacto: previos.get(d.id)?.contacto ?? null });
+    return;
+  }
+  let sinMatch = 0;
+  const pendientes = [];
+  const limite = new Date(Date.now() - CONTACTOS_VIGENCIA_DIAS * 86400000).toISOString().slice(0, 10);
+  for (const d of lista) {
+    const ref = indice.get(slug(`${d.apellido} ${d.nombre}`));
+    const anterior = previos.get(d.id)?.contacto ?? null;
+    d.foto = ref?.foto ?? previos.get(d.id)?.foto ?? null;
+    if (!ref) {
+      sinMatch++;
+      d.contacto = anterior;
+      continue;
+    }
+    const base = `https://www.hcdn.gob.ar/diputados/${ref.slugHcdn}/`;
+    d.contacto = anterior ?? {
+      email: null, telefono: null, oficina: null, redes: [], perfil: base, despacho: `${base}jefe-despacho.html`, revisado: null,
+    };
+    if (!anterior?.revisado || anterior.revisado < limite) pendientes.push({ d, slugHcdn: ref.slugHcdn });
+  }
+  // Primero los nunca revisados, después los más viejos. De a uno y con pausa: HCDN bloquea ráfagas.
+  pendientes.sort((a, b) => (a.d.contacto.revisado ?? "").localeCompare(b.d.contacto.revisado ?? ""));
+  let hechos = 0;
+  for (const { d, slugHcdn } of pendientes.slice(0, CONTACTOS_MAX)) {
+    try {
+      d.contacto = await contactoDiputado(slugHcdn);
+      hechos++;
+    } catch (e) {
+      avisos.push(`Contactos de diputados: HCDN frenó los pedidos (${e.message}); se sigue en la próxima actualización`);
+      break;
+    }
+    await esperar(CONTACTOS_PAUSA_MS);
+  }
+  const faltan = pendientes.length - hechos;
+  log(`Contactos de diputados revisados: ${hechos} · pendientes: ${faltan}`);
+  if (faltan > 0 && hechos === Math.min(CONTACTOS_MAX, pendientes.length))
+    log(`Quedan ${faltan} contactos por revisar en próximas corridas (CONTACTOS_MAX=${CONTACTOS_MAX})`);
+  if (sinMatch) avisos.push(`${sinMatch} diputados no se encontraron en el listado web de HCDN (sin foto ni contacto)`);
 }
 
 // ---------- Personal de bloques en Diputados ----------
@@ -225,6 +338,13 @@ async function senadores() {
             fin: r.C_LEGAL,
             foto: r.FOTO || null,
             personal,
+            contacto: {
+              email: r.EMAIL?.trim().toLowerCase() || null,
+              telefono: r.TELEFONO?.trim() ? `Interno ${r.TELEFONO.trim()}` : null,
+              oficina: null,
+              redes: redes([r.INSTAGRAM, r.TWITTER, r.FACEBOOK, r.YOUTUBE]),
+              perfil: `${SENADO}/senadores/senador/${r.ID}`,
+            },
           };
         }),
       );

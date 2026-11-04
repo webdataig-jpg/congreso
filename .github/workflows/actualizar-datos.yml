@@ -17,6 +17,8 @@ jobs:
         with:
           node-version: 22
       - run: node scripts/update-data.mjs
+        env:
+          CONTACTOS_MAX: 80
       - name: Commit si cambiaron los datos
         run: |
           git config user.name "github-actions[bot]"

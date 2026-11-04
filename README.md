@@ -4,9 +4,11 @@ Muestra, para cada diputado y senador nacional de Argentina:
 
 - cuánto le queda de mandato (cuenta regresiva hasta el 9 de diciembre del último año),
 - cuántos asesores tiene,
-- cuánto cuesta mantenerlo por mes y en todo el mandato (dieta + asesores), cuánto ya costó y cuánto falta.
+- cuánto cuesta mantenerlo por mes y en todo el mandato (dieta + asesores), cuánto ya costó y cuánto falta,
+- su email, oficina y redes sociales (lo que publica cada Cámara),
+- una calificación ciudadana de su gestión (1 a 5 estrellas, anónima).
 
-Next.js estático, pensado para Vercel.
+Next.js para Vercel: la página es estática y las calificaciones usan una API (`/api/calificaciones`) con Upstash Redis.
 
 ## Datos
 
@@ -22,6 +24,8 @@ y lo anota en `avisos`, así que el build no se rompe.
 | Escala salarial en módulos | datos.hcdn.gob.ar · Escala salarial |
 | Senadores y mandato | senado.gob.ar · Datos abiertos (listado de senadores) |
 | Asesores por senador y categoría | senado.gob.ar/senadores/senador/{id} · pestaña Personal |
+| Email, oficina y redes de diputados | hcdn.gob.ar/diputados/{slug}/ (de a uno, con pausa) |
+| Email, interno y redes de senadores | senado.gob.ar · Datos abiertos |
 | Valor del módulo, dieta del Senado | `data/parametros.json` (a mano, ver abajo) |
 
 ### Lo que hay que actualizar a mano
@@ -30,6 +34,13 @@ y lo anota en `avisos`, así que el build no se rompe.
 (senado.gob.ar → Transparencia → Escala salarial), así que no se puede leer de forma automática.
 El script avisa si la dieta de HCDN deja de ser un múltiplo exacto del módulo configurado (hoy son 2.200 módulos),
 que es la señal de que cambió.
+
+### Contactos de diputados
+
+HCDN bloquea las ráfagas de pedidos (responde 429/403). Por eso el script revisa como máximo
+`CONTACTOS_MAX` páginas por corrida (40 por defecto), de a una con 1,5 s de pausa, empezando por las que nunca se
+revisaron o tienen más de 30 días. Si HCDN frena, corta y sigue en la próxima corrida. Para una carga completa:
+`CONTACTOS_MAX=300 npm run update-data` (≈7 min).
 
 ### Limitaciones
 
@@ -48,9 +59,19 @@ npm run update-data   # baja los datos (≈20 s)
 npm run dev
 ```
 
+## Calificaciones
+
+- Se guardan en Upstash Redis: hashes `calif:suma` y `calif:cant` (agregados) y `calif:votos:{camara}:{id}` (un voto por votante).
+- El votante se identifica con una cookie anónima (`votante`); se guarda solo su hash. Se puede cambiar el voto.
+- Límites por IP (hasheada): 5 votos por legislador por día y 120 por hora.
+- Sin Redis configurado: en desarrollo se usa memoria (se pierde al reiniciar); en producción la calificación se muestra como no disponible.
+- Variables: `KV_REST_API_URL` y `KV_REST_API_TOKEN` (las crea Vercel al conectar Upstash) o `UPSTASH_REDIS_REST_URL` / `UPSTASH_REDIS_REST_TOKEN`. Opcional: `CALIFICACIONES_SAL` para el hash.
+- No es una encuesta representativa: sin login, alguien decidido puede votar más de una vez (borrando cookies y cambiando de red).
+
 ## Despliegue en Vercel
 
-1. Subir el repo a GitHub e importarlo en vercel.com (framework: Next.js, sin variables de entorno).
-2. Cada deploy vuelve a descargar los datos.
-3. `.github/workflows/actualizar-datos.yml` actualiza el JSON todos los lunes y hace commit si hay cambios,
+1. Subir el repo a GitHub e importarlo en vercel.com (framework: Next.js).
+2. En el proyecto de Vercel: Storage → Marketplace → **Upstash (Redis)** → crear y conectar. Eso agrega las variables `KV_REST_API_*`. Redeploy.
+3. Cada deploy vuelve a descargar los datos.
+4. `.github/workflows/actualizar-datos.yml` actualiza el JSON todos los lunes y hace commit si hay cambios,
    lo que dispara un nuevo deploy en Vercel.
