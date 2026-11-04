@@ -1,41 +1,79 @@
 @import "tailwindcss";
 
+/*
+  Estilo: achromatic ledger. La interfaz va en tinta; el único color (--hue) marca el dato principal
+  de cada bloque. Fondo gris azulado de libro contable. Sin sombras en reposo, sin degradés.
+*/
 :root {
-  --papel: #f4f1ea;
-  --papel-2: #ebe6db;
-  --tinta: #16130f;
-  --tinta-2: #57524a;
-  --tinta-3: #857f74;
-  --regla: #d6cfc1;
-  --acento: #c2410c;
-  --acento-suave: #f6dccd;
+  --ground: #f2f4f7;
+  --surface: #ffffff;
+  --raised: #eef0f3;
+  --active: #e4e7ec;
+  --border: #e3e6ea;
+  --rule: #eef0f3;
+  --control: #cfd4da;
+  --ink: #0a0a0a;
+  --muted: #5d636b;
+  --faint: #6b7078;
+  --primary: #141414;
+  --on-primary: #ffffff;
+  --hue: #1d5fbf;
+  --hue-soft: #cfdcf0;
+  --positive: #247b50;
+  --negative: #c4242a;
+  --notice-bg: #fffbeb;
+  --notice-border: #fde68a;
+  --notice-ink: #92400e;
+  --star: #b45309;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --papel: #14120f;
-    --papel-2: #1e1b17;
-    --tinta: #f1ece2;
-    --tinta-2: #b4ad9f;
-    --tinta-3: #8a8478;
-    --regla: #35302a;
-    --acento: #fb923c;
-    --acento-suave: #3a2416;
+    --ground: #000000;
+    --surface: #111111;
+    --raised: #1b1b1b;
+    --active: #232323;
+    --border: #262626;
+    --rule: #1c1c1c;
+    --control: #444444;
+    --ink: #ffffff;
+    --muted: #b4b4b4;
+    --faint: #949494;
+    --primary: #ffffff;
+    --on-primary: #000000;
+    --hue: #6ea2f0;
+    --hue-soft: #1f2d44;
+    --positive: #3fc07a;
+    --negative: #e5566f;
+    --notice-bg: #1f1a0e;
+    --notice-border: #4a3a12;
+    --notice-ink: #f2c46b;
+    --star: #f0a43a;
   }
 }
 
 @theme inline {
-  --color-papel: var(--papel);
-  --color-papel-2: var(--papel-2);
-  --color-tinta: var(--tinta);
-  --color-tinta-2: var(--tinta-2);
-  --color-tinta-3: var(--tinta-3);
-  --color-regla: var(--regla);
-  --color-acento: var(--acento);
-  --color-acento-suave: var(--acento-suave);
-  --font-sans: var(--font-plex-sans);
-  --font-mono: var(--font-plex-mono);
-  --font-display: var(--font-display-serif);
+  --color-ground: var(--ground);
+  --color-surface: var(--surface);
+  --color-raised: var(--raised);
+  --color-active: var(--active);
+  --color-border: var(--border);
+  --color-rule: var(--rule);
+  --color-control: var(--control);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-hue: var(--hue);
+  --color-hue-soft: var(--hue-soft);
+  --color-positive: var(--positive);
+  --color-negative: var(--negative);
+  --color-notice-bg: var(--notice-bg);
+  --color-notice-border: var(--notice-border);
+  --color-notice-ink: var(--notice-ink);
+  --color-star: var(--star);
+  --font-sans: var(--font-geist), Inter, system-ui, sans-serif;
 }
 
 html {
@@ -43,30 +81,30 @@ html {
 }
 
 body {
-  background: var(--papel);
-  color: var(--tinta);
-  font-family: var(--font-plex-sans), system-ui, sans-serif;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-geist), Inter, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
   -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .num {
-  font-family: var(--font-plex-mono), ui-monospace, monospace;
   font-variant-numeric: tabular-nums;
-  letter-spacing: -0.01em;
 }
 
 :focus-visible {
-  outline: 2px solid var(--acento);
+  outline: 2px solid var(--hue);
   outline-offset: 2px;
 }
 
-input[type="range"],
 input[type="checkbox"] {
-  accent-color: var(--acento);
+  accent-color: var(--primary);
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .barra > span {
-    transition: width 600ms cubic-bezier(0.22, 1, 0.36, 1);
+  .anim-ancho {
+    transition: width 500ms cubic-bezier(0.22, 1, 0.36, 1);
   }
 }

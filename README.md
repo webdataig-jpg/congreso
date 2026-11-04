@@ -5,6 +5,7 @@ Muestra, para cada diputado y senador nacional de Argentina:
 - cuánto le queda de mandato (cuenta regresiva hasta el 9 de diciembre del último año),
 - cuántos asesores tiene,
 - cuánto cuesta mantenerlo por mes y en todo el mandato (dieta + asesores), cuánto ya costó y cuánto falta,
+- cuánto cuesta todo el Congreso (presupuesto por organismo, del Ministerio de Economía),
 - su email, oficina y redes sociales (lo que publica cada Cámara),
 - una calificación ciudadana de su gestión (1 a 5 estrellas, anónima).
 
@@ -26,6 +27,7 @@ y lo anota en `avisos`, así que el build no se rompe.
 | Asesores por senador y categoría | senado.gob.ar/senadores/senador/{id} · pestaña Personal |
 | Email, oficina y redes de diputados | hcdn.gob.ar/diputados/{slug}/ (de a uno, con pausa) |
 | Email, interno y redes de senadores | senado.gob.ar · Datos abiertos |
+| Presupuesto del Poder Legislativo | dgsiaf-repo.mecon.gob.ar · crédito anual del año en curso (zip) |
 | Valor del módulo, dieta del Senado | `data/parametros.json` (a mano, ver abajo) |
 
 ### Lo que hay que actualizar a mano

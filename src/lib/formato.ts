@@ -9,9 +9,9 @@ export const dec = (n: number) => decimal1.format(n);
 /** Monto abreviado: $ 12,3 M · $ 1.234 M · $ 2,1 mil M */
 export function $corto(n: number): string {
   const abs = Math.abs(n);
-  if (abs >= 1e12) return `$ ${dec(n / 1e12)} billones`;
-  if (abs >= 1e9) return `$ ${int(n / 1e6)} M`;
-  if (abs >= 1e6) return `$ ${dec(n / 1e6)} M`;
+  if (abs >= 1e12) return `$ ${dec(n / 1e12)} billones`;
+  if (abs >= 1e9) return `$ ${int(n / 1e6)} M`;
+  if (abs >= 1e6) return `$ ${dec(n / 1e6)} M`;
   return $(n);
 }
 
@@ -26,4 +26,11 @@ export function fecha(iso: string): string {
 
 export function plural(n: number, uno: string, varios: string) {
   return `${n} ${n === 1 ? uno : varios}`;
+}
+
+/** Monto expresado en millones de pesos: $ 923.398 M */
+export const millones = (n: number) => `$ ${int(n)} M`;
+
+export function pct(x: number, decimales = 1) {
+  return `${new Intl.NumberFormat("es-AR", { minimumFractionDigits: decimales, maximumFractionDigits: decimales }).format(x * 100)}%`;
 }

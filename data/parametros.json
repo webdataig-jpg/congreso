@@ -8,8 +8,25 @@
   "modulosDietaSenadorDetalle": "2.500 de dieta + 1.000 de gastos de representación + 500 de desarraigo (Res. DR 8/24)",
   "modulosDietaSenadorFuente": "https://www.senado.gob.ar/dietas",
   "escalaFallback": {
-    "1": 845, "2": 716, "3": 606, "4": 529, "5": 461, "6": 402, "7": 350,
-    "8": 306, "9": 254, "10": 224, "11": 199, "12": 176, "13": 155, "14": 138
+    "1": 845,
+    "2": 716,
+    "3": 606,
+    "4": 529,
+    "5": 461,
+    "6": 402,
+    "7": 350,
+    "8": 306,
+    "9": 254,
+    "10": 224,
+    "11": 199,
+    "12": 176,
+    "13": 155,
+    "14": 138
   },
-  "dietaDiputadoFallback": { "dieta": 6125805.18, "gastosRepresentacion": 464489.12 }
+  "dietaDiputadoFallback": {
+    "dieta": 6125805.18,
+    "gastosRepresentacion": 464489.12
+  },
+  "poblacion": 46044703,
+  "poblacionFuente": "INDEC, Censo 2022 (resultados definitivos)"
 }

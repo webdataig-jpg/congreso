@@ -3,6 +3,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
+import { inflateRawSync } from "node:zlib";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const OUT = path.join(ROOT, "data", "legisladores.json");
@@ -357,12 +358,113 @@ async function senadores() {
   }
 }
 
-const [esc, dieta, dips, persDip, sens] = await Promise.all([
+// ---------- Presupuesto del Poder Legislativo (Ministerio de Economía, DGSIAF) ----------
+// Crédito presupuestado, vigente y devengado del año, en millones de pesos, por organismo e inciso.
+function unzipPrimerArchivo(buf) {
+  // Busca el "end of central directory" y de ahí el primer archivo.
+  let eocd = -1;
+  for (let i = buf.length - 22; i >= Math.max(0, buf.length - 65557); i--) {
+    if (buf.readUInt32LE(i) === 0x06054b50) { eocd = i; break; }
+  }
+  if (eocd < 0) throw new Error("zip sin directorio central");
+  const cd = buf.readUInt32LE(eocd + 16);
+  if (buf.readUInt32LE(cd) !== 0x02014b50) throw new Error("zip: directorio central inválido");
+  const metodo = buf.readUInt16LE(cd + 10);
+  const comprimido = buf.readUInt32LE(cd + 20);
+  const local = buf.readUInt32LE(cd + 42);
+  const inicio = local + 30 + buf.readUInt16LE(local + 26) + buf.readUInt16LE(local + 28);
+  const datos = buf.subarray(inicio, inicio + comprimido);
+  if (metodo === 0) return datos;
+  if (metodo === 8) return inflateRawSync(datos);
+  throw new Error(`zip: método ${metodo} no soportado`);
+}
+
+const MESES = { enero: 1, febrero: 2, marzo: 3, abril: 4, mayo: 5, junio: 6, julio: 7, agosto: 8, septiembre: 9, setiembre: 9, octubre: 10, noviembre: 11, diciembre: 12 };
+
+async function presupuesto() {
+  const anio = new Date().getFullYear();
+  const url = `https://dgsiaf-repo.mecon.gob.ar/repository/pa/datasets/${anio}/credito-anual-${anio}.zip`;
+  try {
+    const res = await fetch(url, { headers: { "User-Agent": UA }, signal: AbortSignal.timeout(180000) });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const csv = unzipPrimerArchivo(Buffer.from(await res.arrayBuffer())).toString("utf8").replace(/^﻿/, "");
+    const lineas = csv.split(/\r?\n/);
+    const cab = splitCSV(lineas[0]);
+    const ix = Object.fromEntries(cab.map((k, i) => [k, i]));
+    const n = (x) => Number(String(x ?? "").replace(",", ".")) || 0;
+    const org = new Map();
+    const inc = new Map();
+    const total = { vigente: 0, devengado: 0 };
+    let fechaTxt = "";
+    for (let i = 1; i < lineas.length; i++) {
+      if (!lineas[i]) continue;
+      const r = splitCSV(lineas[i]);
+      const vig = n(r[ix.credito_vigente]);
+      const dev = n(r[ix.credito_devengado]);
+      total.vigente += vig;
+      total.devengado += dev;
+      fechaTxt ||= r[ix.ultima_actualizacion_fecha] ?? "";
+      if (r[ix.jurisdiccion_id] !== "1") continue;
+      const id = r[ix.servicio_id];
+      const o = org.get(id) ?? { id, nombre: r[ix.servicio_desc], presupuestado: 0, vigente: 0, devengado: 0 };
+      o.presupuestado += n(r[ix.credito_presupuestado]);
+      o.vigente += vig;
+      o.devengado += dev;
+      org.set(id, o);
+      const k = r[ix.inciso_desc];
+      const x = inc.get(k) ?? { nombre: k, vigente: 0, devengado: 0 };
+      x.vigente += vig;
+      x.devengado += dev;
+      inc.set(k, x);
+    }
+    if (org.size < 5) throw new Error(`solo ${org.size} organismos del Poder Legislativo`);
+    const m = fechaTxt.match(/(\d{1,2}) (\p{L}+) (\d{4})/u);
+    const actualizado = m && MESES[m[2].toLowerCase()]
+      ? `${m[3]}-${String(MESES[m[2].toLowerCase()]).padStart(2, "0")}-${m[1].padStart(2, "0")}`
+      : null;
+    const r2 = (v) => Math.round(v * 100) / 100;
+    return {
+      ejercicio: anio,
+      actualizado,
+      url,
+      unidad: "millones de pesos",
+      totalNacional: { vigente: r2(total.vigente), devengado: r2(total.devengado) },
+      organismos: [...org.values()]
+        .map((o) => ({ ...o, presupuestado: r2(o.presupuestado), vigente: r2(o.vigente), devengado: r2(o.devengado) }))
+        .sort((a, b) => b.vigente - a.vigente),
+      incisos: [...inc.values()].map((x) => ({ ...x, vigente: r2(x.vigente), devengado: r2(x.devengado) })).sort((a, b) => b.vigente - a.vigente),
+    };
+  } catch (err) {
+    avisos.push(`Presupuesto del Congreso: se usó la copia local (${err.message})`);
+    return previo?.presupuesto ?? null;
+  }
+}
+
+// Divide una línea CSV respetando comillas
+function splitCSV(l) {
+  const o = [];
+  let f = "", q = false;
+  for (let i = 0; i < l.length; i++) {
+    const c = l[i];
+    if (q) {
+      if (c === '"' && l[i + 1] === '"') { f += '"'; i++; }
+      else if (c === '"') q = false;
+      else f += c;
+    } else if (c === '"') q = true;
+    else if (c === ",") { o.push(f); f = ""; }
+    else f += c;
+  }
+  o.push(f);
+  return o;
+}
+
+const [esc, dieta, dips, persDip, sens, presu] = await Promise.all([
   escala(),
   dietaDiputados(),
   diputados(),
   personalDiputados(),
   senadores(),
+  presupuesto(),
 ]);
 
 const salida = {
@@ -373,6 +475,7 @@ const salida = {
   diputados: dips,
   personalDiputados: persDip,
   senadores: sens,
+  presupuesto: presu,
   avisos,
 };
 
@@ -383,5 +486,6 @@ if (!dips.lista.length && !sens.lista.length) {
 
 await writeFile(OUT, JSON.stringify(salida, null, 1) + "\n", "utf8");
 log(`Diputados: ${dips.lista.length} · Senadores: ${sens.lista.length} · Personal de bloques HCDN: ${persDip?.total ?? "—"}`);
+if (presu) log(`Presupuesto ${presu.ejercicio} del Poder Legislativo: $ ${Math.round(presu.organismos.reduce((a, o) => a + o.vigente, 0))} M vigente (al ${presu.actualizado})`);
 log(`Asesores de senadores: ${sens.lista.reduce((a, s) => a + (s.personal?.total ?? 0), 0)}`);
 if (avisos.length) avisos.forEach((a) => log("AVISO:", a));

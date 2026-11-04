@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-04T15:34:07.466Z",
+ "generado": "2026-11-04T16:15:12.220Z",
  "parametros": {
   "valorModulo": 2784.456902,
   "valorModuloVigencia": "2026-03",
@@ -28,7 +28,9 @@
   "dietaDiputadoFallback": {
    "dieta": 6125805.18,
    "gastosRepresentacion": 464489.12
-  }
+  },
+  "poblacion": 46044703,
+  "poblacionFuente": "INDEC, Censo 2022 (resultados definitivos)"
  },
  "escala": {
   "modulos": {
@@ -8163,8 +8165,131 @@
     }
    }
   ],
-  "actualizado": "2026-11-04T15:26:17.981Z",
+  "actualizado": "2026-11-04T16:15:12.220Z",
   "url": "https://www.senado.gob.ar/micrositios/DatosAbiertos/ExportarListadoSenadores/json"
+ },
+ "presupuesto": {
+  "ejercicio": 2026,
+  "actualizado": "2026-11-02",
+  "url": "https://dgsiaf-repo.mecon.gob.ar/repository/pa/datasets/2026/credito-anual-2026.zip",
+  "unidad": "millones de pesos",
+  "totalNacional": {
+   "vigente": 152474968.84,
+   "devengado": 128458366.45
+  },
+  "organismos": [
+   {
+    "id": "313",
+    "nombre": "Honorable Cámara de Diputados de la Nación Argentina",
+    "presupuestado": 219790.61,
+    "vigente": 277814.99,
+    "devengado": 216485.91
+   },
+   {
+    "id": "312",
+    "nombre": "Honorable Senado de la Nación Argentina",
+    "presupuestado": 185313,
+    "vigente": 267406.01,
+    "devengado": 204708.91
+   },
+   {
+    "id": "316",
+    "nombre": "Dirección de Ayuda Social para el Personal del Congreso de la Nación (DAS)",
+    "presupuestado": 63620,
+    "vigente": 130032.25,
+    "devengado": 108557.46
+   },
+   {
+    "id": "1",
+    "nombre": "Auditoría General de la Nación",
+    "presupuestado": 84515.14,
+    "vigente": 101748.1,
+    "devengado": 82310.18
+   },
+   {
+    "id": "314",
+    "nombre": "Biblioteca del Congreso de la Nación",
+    "presupuestado": 52295,
+    "vigente": 64791,
+    "devengado": 50341.21
+   },
+   {
+    "id": "340",
+    "nombre": "Procuración Penitenciaria de la Nación",
+    "presupuestado": 19263,
+    "vigente": 20549.43,
+    "devengado": 14948.5
+   },
+   {
+    "id": "315",
+    "nombre": "Imprenta del Congreso de la Nación",
+    "presupuestado": 14057.96,
+    "vigente": 18741.06,
+    "devengado": 13834.1
+   },
+   {
+    "id": "319",
+    "nombre": "Defensoría del Pueblo de la Nación",
+    "presupuestado": 14916.9,
+    "vigente": 16866.9,
+    "devengado": 12643.63
+   },
+   {
+    "id": "385",
+    "nombre": "Defensoría de los Derechos de las Niñas, Niños y Adolescentes",
+    "presupuestado": 9194,
+    "vigente": 11347.28,
+    "devengado": 8460.6
+   },
+   {
+    "id": "387",
+    "nombre": "Comité Nacional para la Prevención de la Tortura (CNPT)",
+    "presupuestado": 5465,
+    "vigente": 8337.86,
+    "devengado": 6417.04
+   },
+   {
+    "id": "346",
+    "nombre": "Defensoría del Público de Servicios de Comunicación Audiovisual",
+    "presupuestado": 4230.32,
+    "vigente": 4020.4,
+    "devengado": 1809.37
+   },
+   {
+    "id": "369",
+    "nombre": "Oficina de Presupuesto del Congreso",
+    "presupuestado": 1352,
+    "vigente": 1742.45,
+    "devengado": 1364.05
+   }
+  ],
+  "incisos": [
+   {
+    "nombre": "Gastos en personal",
+    "vigente": 769084.81,
+    "devengado": 595605.91
+   },
+   {
+    "nombre": "Servicios no personales",
+    "vigente": 121569.62,
+    "devengado": 103405.95
+   },
+   {
+    "nombre": "Bienes de consumo",
+    "vigente": 25534.63,
+    "devengado": 19249.64
+   },
+   {
+    "nombre": "Bienes de uso",
+    "vigente": 6067.72,
+    "devengado": 2625.93
+   },
+   {
+    "nombre": "Transferencias",
+    "vigente": 1140.96,
+    "devengado": 993.54
+   }
+  ]
  },
  "avisos": []
 }

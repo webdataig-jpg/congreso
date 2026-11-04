@@ -43,12 +43,15 @@ export interface Datos {
     modulosDietaSenador: number;
     modulosDietaSenadorDetalle: string;
     modulosDietaSenadorFuente: string;
+    poblacion: number;
+    poblacionFuente: string;
   };
   escala: Fuente & { modulos: Categorias };
   dietaDiputado: Fuente & { dieta: number; gastosRepresentacion: number };
   diputados: Fuente & { lista: LegisladorBase[] };
   personalDiputados: (Fuente & { total: number; categorias: Categorias }) | null;
   senadores: Fuente & { lista: Senador[] };
+  presupuesto: Presupuesto | null;
   avisos: string[];
 }
 
@@ -81,4 +84,23 @@ export interface Fila {
 export interface Calificacion {
   suma: number;
   cant: number;
+}
+
+export interface Organismo {
+  id: string;
+  nombre: string;
+  presupuestado: number;
+  vigente: number;
+  devengado: number;
+}
+
+/** Montos en millones de pesos. */
+export interface Presupuesto {
+  ejercicio: number;
+  actualizado: string | null;
+  url: string;
+  unidad: string;
+  totalNacional: { vigente: number; devengado: number };
+  organismos: Organismo[];
+  incisos: { nombre: string; vigente: number; devengado: number }[];
 }

@@ -89,10 +89,10 @@ export function EstrellasResumen({ c }: { c?: Calificacion }) {
   const p = promedio(c);
   if (p == null || !c) return null;
   return (
-    <span className="inline-flex items-center gap-1 text-xs text-tinta-2" title={`${dec(p)} de 5 · ${int(c.cant)} votos`}>
-      <Estrella llena={1} className="size-3.5 text-acento" />
+    <span className="inline-flex items-center gap-1 text-xs text-muted" title={`${dec(p)} de 5 · ${int(c.cant)} votos`}>
+      <Estrella llena={1} className="size-3.5 text-ink" />
       <span className="num">{dec(p)}</span>
-      <span className="text-tinta-3">({int(c.cant)})</span>
+      <span className="text-muted">({int(c.cant)})</span>
       <span className="sr-only">
         Calificación promedio {dec(p)} de 5 con {int(c.cant)} votos
       </span>
@@ -118,7 +118,7 @@ export function Calificador({
   const mostrar = hover || mio;
 
   if (estado.disponible === false) {
-    return <p className="text-sm text-tinta-3">Las calificaciones no están disponibles en este momento.</p>;
+    return <p className="text-sm text-muted">Las calificaciones no están disponibles en este momento.</p>;
   }
 
   const enviar = async (n: number) => {
@@ -151,16 +151,16 @@ export function Calificador({
               onFocus={() => setHover(n)}
               onBlur={() => setHover(0)}
               onClick={() => enviar(n)}
-              className="rounded p-0.5 text-acento transition-transform hover:scale-110 active:scale-95 disabled:opacity-50"
+              className="rounded p-0.5 text-ink transition-transform hover:scale-110 active:scale-95 disabled:opacity-50"
             >
               <Estrella llena={n <= mostrar ? 1 : 0} className="size-7" />
             </button>
           ))}
         </div>
-        <p className="text-sm text-tinta-2">
+        <p className="text-sm text-muted">
           {p != null && c ? (
             <>
-              <span className="num font-medium text-tinta">{dec(p)}</span> de 5 · {int(c.cant)}{" "}
+              <span className="num font-medium text-ink">{dec(p)}</span> de 5 · {int(c.cant)}{" "}
               {c.cant === 1 ? "voto" : "votos"}
             </>
           ) : (
@@ -170,11 +170,11 @@ export function Calificador({
       </div>
       <p className="mt-1 min-h-5 text-xs" aria-live="polite">
         {mensaje ? (
-          <span className={mensaje.tipo === "error" ? "text-acento" : "text-tinta-2"}>{mensaje.texto}</span>
+          <span className={mensaje.tipo === "error" ? "text-negative" : "text-muted"}>{mensaje.texto}</span>
         ) : mio ? (
-          <span className="text-tinta-3">Tu voto: {mio} de 5. Podés cambiarlo cuando quieras.</span>
+          <span className="text-muted">Tu voto: {mio} de 5. Podés cambiarlo cuando quieras.</span>
         ) : (
-          <span className="text-tinta-3">Anónimo. Un voto por persona, se puede cambiar.</span>
+          <span className="text-muted">Anónimo. Un voto por persona, se puede cambiar.</span>
         )}
       </p>
     </div>
@@ -182,14 +182,14 @@ export function Calificador({
 }
 
 export function DatosContacto({ c }: { c: Contacto | null }) {
-  if (!c) return <p className="text-sm text-tinta-3">Sin datos de contacto publicados.</p>;
-  const enlace = "underline decoration-regla underline-offset-2 hover:decoration-acento";
+  if (!c) return <p className="text-sm text-muted">Sin datos de contacto publicados.</p>;
+  const enlace = "underline decoration-control underline-offset-2 hover:decoration-ink";
   return (
     <div className="space-y-2 text-sm">
-      <dl className="divide-y divide-regla">
+      <dl className="divide-y divide-rule">
         {c.email && (
           <div className="flex justify-between gap-4 py-1.5">
-            <dt className="text-tinta-2">Email</dt>
+            <dt className="text-muted">Email</dt>
             <dd className="min-w-0 truncate">
               <a href={`mailto:${c.email}`} className={enlace}>
                 {c.email}
@@ -199,13 +199,13 @@ export function DatosContacto({ c }: { c: Contacto | null }) {
         )}
         {c.telefono && (
           <div className="flex justify-between gap-4 py-1.5">
-            <dt className="text-tinta-2">Teléfono</dt>
+            <dt className="text-muted">Teléfono</dt>
             <dd className="num">{c.telefono}</dd>
           </div>
         )}
         {c.oficina && (
           <div className="flex justify-between gap-4 py-1.5">
-            <dt className="text-tinta-2">Oficina</dt>
+            <dt className="text-muted">Oficina</dt>
             <dd>{c.oficina}</dd>
           </div>
         )}
@@ -218,7 +218,7 @@ export function DatosContacto({ c }: { c: Contacto | null }) {
                 href={r.url}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                className="inline-block rounded-full border border-regla px-3 py-1 text-xs font-medium hover:border-tinta"
+                className="inline-block rounded-full border border-border px-3 py-1 text-xs font-medium hover:border-ink"
               >
                 {r.red}
               </a>

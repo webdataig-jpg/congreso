@@ -18,7 +18,7 @@ export function construirFilas(datos: Datos): Fila[] {
 
   const dd = datos.dietaDiputado;
   const dietaDip = dd.dieta + dd.gastosRepresentacion;
-  const nDip = datos.diputados.lista.length || 257;
+  const nDip = datos.diputados.lista.length || 1;
   const pd = datos.personalDiputados;
   const promAsesores = pd ? pd.total / nDip : 0;
   const promCosto = pd ? costoCategorias(datos, pd.categorias) / nDip : 0;
