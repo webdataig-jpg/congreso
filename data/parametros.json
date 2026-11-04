@@ -1,0 +1,15 @@
+{
+  "valorModulo": 2784.456902,
+  "valorModuloVigencia": "2026-03",
+  "valorModuloFuente": "https://www.senado.gob.ar/prensa/adjunto/descargarArchivo/tipo/EscalaSalarial",
+  "modulosRC": 85.141,
+  "modulosRCNota": "Suplemento 'RC 2 y 6/22' que figura en la escala salarial del personal legislativo (Ley 24.600), igual para todas las categorías.",
+  "modulosDietaSenador": 4000,
+  "modulosDietaSenadorDetalle": "2.500 de dieta + 1.000 de gastos de representación + 500 de desarraigo (Res. DR 8/24)",
+  "modulosDietaSenadorFuente": "https://www.senado.gob.ar/dietas",
+  "escalaFallback": {
+    "1": 845, "2": 716, "3": 606, "4": 529, "5": 461, "6": 402, "7": 350,
+    "8": 306, "9": 254, "10": 224, "11": 199, "12": 176, "13": 155, "14": 138
+  },
+  "dietaDiputadoFallback": { "dieta": 6125805.18, "gastosRepresentacion": 464489.12 }
+}

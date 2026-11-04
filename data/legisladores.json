@@ -1,0 +1,4261 @@
+{
+ "generado": "2026-11-04T15:19:46.300Z",
+ "parametros": {
+  "valorModulo": 2784.456902,
+  "valorModuloVigencia": "2026-03",
+  "valorModuloFuente": "https://www.senado.gob.ar/prensa/adjunto/descargarArchivo/tipo/EscalaSalarial",
+  "modulosRC": 85.141,
+  "modulosRCNota": "Suplemento 'RC 2 y 6/22' que figura en la escala salarial del personal legislativo (Ley 24.600), igual para todas las categorías.",
+  "modulosDietaSenador": 4000,
+  "modulosDietaSenadorDetalle": "2.500 de dieta + 1.000 de gastos de representación + 500 de desarraigo (Res. DR 8/24)",
+  "modulosDietaSenadorFuente": "https://www.senado.gob.ar/dietas",
+  "escalaFallback": {
+   "1": 845,
+   "2": 716,
+   "3": 606,
+   "4": 529,
+   "5": 461,
+   "6": 402,
+   "7": 350,
+   "8": 306,
+   "9": 254,
+   "10": 224,
+   "11": 199,
+   "12": 176,
+   "13": 155,
+   "14": 138
+  },
+  "dietaDiputadoFallback": {
+   "dieta": 6125805.18,
+   "gastosRepresentacion": 464489.12
+  }
+ },
+ "escala": {
+  "modulos": {
+   "1": 845,
+   "2": 716,
+   "3": 606,
+   "4": 529,
+   "5": 461,
+   "6": 402,
+   "7": 350,
+   "8": 306,
+   "9": 254,
+   "10": 224,
+   "11": 199,
+   "12": 176,
+   "13": 155,
+   "14": 138
+  },
+  "actualizado": "2026-08-11T11:13:53.016981",
+  "url": "https://datos.hcdn.gob.ar/dataset/e471dfa2-92ab-4c6d-9bd1-b46d97c6ea1b/resource/673f193d-1cfb-46e0-b6c8-e931aa0a5314/download/escala_salarial1.6.csv"
+ },
+ "dietaDiputado": {
+  "dieta": 6125805.18,
+  "gastosRepresentacion": 464489.12,
+  "actualizado": "2026-08-12T12:15:11.443271",
+  "url": "https://datos.hcdn.gob.ar/dataset/07518f0f-43f0-41f5-a462-53ed8a1bebb6/resource/0c91eb20-f694-4064-a65b-b8bfe3673c7e/download/remuneraciones1.9.csv"
+ },
+ "diputados": {
+  "lista": [
+   {
+    "id": "aguero-guillermo-cesar",
+    "apellido": "Agüero",
+    "nombre": "Guillermo César",
+    "distrito": "Chaco",
+    "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "aguirre-hilda",
+    "apellido": "Aguirre",
+    "nombre": "Hilda",
+    "distrito": "La Rioja",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "ajmechet-sabrina",
+    "apellido": "Ajmechet",
+    "nombre": "Sabrina",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "ali-ernesto-pipi",
+    "apellido": "Alí",
+    "nombre": "Ernesto \"Pipi\"",
+    "distrito": "San Luis",
+    "bloque": "PRIMERO SAN LUIS",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2024-01-31",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "almena-carlos-alberto",
+    "apellido": "Almena",
+    "nombre": "Carlos Alberto",
+    "distrito": "San Luis",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "almiron-lisandro",
+    "apellido": "Almirón",
+    "nombre": "Lisandro",
+    "distrito": "Corrientes",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "alvarez-claudio",
+    "apellido": "Álvarez",
+    "nombre": "Claudio",
+    "distrito": "San Luis",
+    "bloque": "ARGENTINA FEDERAL",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "andino-cristian",
+    "apellido": "Andino",
+    "nombre": "Cristian",
+    "distrito": "San Juan",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "andrade-javier",
+    "apellido": "Andrade",
+    "nombre": "Javier",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "andreussi-barbara",
+    "apellido": "Andreussi",
+    "nombre": "Barbara",
+    "distrito": "Jujuy",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "ansaloni-pablo",
+    "apellido": "Ansaloni",
+    "nombre": "Pablo",
+    "distrito": "Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "arabia-damian",
+    "apellido": "Arabia",
+    "nombre": "Damián",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "araujo-hernandez-jorge-neri",
+    "apellido": "Araujo Hernández",
+    "nombre": "Jorge Neri",
+    "distrito": "Tierra del Fuego",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "ardohain-martin",
+    "apellido": "Ardohain",
+    "nombre": "Martín",
+    "distrito": "La Pampa",
+    "bloque": "PRO",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "arrieta-lourdes-micaela",
+    "apellido": "Arrieta",
+    "nombre": "Lourdes Micaela",
+    "distrito": "Mendoza",
+    "bloque": "PROVINCIAS UNIDAS",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "arrua-alberto",
+    "apellido": "Arrúa",
+    "nombre": "Alberto",
+    "distrito": "Misiones",
+    "bloque": "ARGENTINA FEDERAL",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "aveiro-martin",
+    "apellido": "Aveiro",
+    "nombre": "Martín",
+    "distrito": "Mendoza",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "avico-belen",
+    "apellido": "Avico",
+    "nombre": "Belén",
+    "distrito": "Córdoba",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "avila-fernanda",
+    "apellido": "Avila",
+    "nombre": "Fernanda",
+    "distrito": "Catamarca",
+    "bloque": "ELIJO CATAMARCA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "avila-jorge-antonio",
+    "apellido": "Avila",
+    "nombre": "Jorge Antonio",
+    "distrito": "Chubut",
+    "bloque": "PROVINCIAS UNIDAS",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "banfi-karina",
+    "apellido": "Banfi",
+    "nombre": "Karina",
+    "distrito": "Buenos Aires",
+    "bloque": "ADELANTE BUENOS AIRES",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "barbur-marcelo",
+    "apellido": "Barbur",
+    "nombre": "Marcelo",
+    "distrito": "Santiago del Estero",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "basterra-luis-eugenio",
+    "apellido": "Basterra",
+    "nombre": "Luis Eugenio",
+    "distrito": "Formosa",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "basualdo-atilio",
+    "apellido": "Basualdo",
+    "nombre": "Atilio",
+    "distrito": "Formosa",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-17",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "basualdo-carolina",
+    "apellido": "Basualdo",
+    "nombre": "Carolina",
+    "distrito": "Córdoba",
+    "bloque": "PROVINCIAS UNIDAS",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "becerra-monica",
+    "apellido": "Becerra",
+    "nombre": "Mónica",
+    "distrito": "San Luis",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "benedit-beltran",
+    "apellido": "Benedit",
+    "nombre": "Beltrán",
+    "distrito": "Entre Ríos",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "benegas-lynch-bertie",
+    "apellido": "Benegas Lynch",
+    "nombre": "Bertie",
+    "distrito": "Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "bianchetti-emmanuel",
+    "apellido": "Bianchetti",
+    "nombre": "Emmanuel",
+    "distrito": "Misiones",
+    "bloque": "PRO",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "biella-bernardo",
+    "apellido": "Biella",
+    "nombre": "Bernardo",
+    "distrito": "Salta",
+    "bloque": "ARGENTINA FEDERAL",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "bonacci-rocio",
+    "apellido": "Bonacci",
+    "nombre": "Rocío",
+    "distrito": "Santa Fe",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "bongiovanni-alejandro",
+    "apellido": "Bongiovanni",
+    "nombre": "Alejandro",
+    "distrito": "Santa Fe",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "bordet-gustavo",
+    "apellido": "Bordet",
+    "nombre": "Gustavo",
+    "distrito": "Entre Ríos",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "borgatta-alejandrina",
+    "apellido": "Borgatta",
+    "nombre": "Alejandrina",
+    "distrito": "Santa Fe",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "bornoroni-gabriel",
+    "apellido": "Bornoroni",
+    "nombre": "Gabriel",
+    "distrito": "Córdoba",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "bregman-myriam",
+    "apellido": "Bregman",
+    "nombre": "Myriam",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "PTS-FRENTE DE IZQUIERDA Y DE TRABAJADORES UNIDAD",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "brizuela-adrian",
+    "apellido": "Brizuela",
+    "nombre": "Adrián",
+    "distrito": "Catamarca",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "brugge-juan-fernando",
+    "apellido": "Brügge",
+    "nombre": "Juan Fernando",
+    "distrito": "Córdoba",
+    "bloque": "PROVINCIAS UNIDAS",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "bruno-eliana",
+    "apellido": "Bruno",
+    "nombre": "Eliana",
+    "distrito": "Salta",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "cafiero-santiago",
+    "apellido": "Cafiero",
+    "nombre": "Santiago",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "campero-mariano",
+    "apellido": "Campero",
+    "nombre": "Mariano",
+    "distrito": "Tucumán",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "campitelli-celia",
+    "apellido": "Campitelli",
+    "nombre": "Celia",
+    "distrito": "Santiago del Estero",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "campo-julieta-marisol",
+    "apellido": "Campo",
+    "nombre": "Julieta Marisol",
+    "distrito": "Chaco",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "campora-lucia",
+    "apellido": "Cámpora",
+    "nombre": "Lucía",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "capozzi-sergio-eduardo",
+    "apellido": "Capozzi",
+    "nombre": "Sergio Eduardo",
+    "distrito": "Río Negro",
+    "bloque": "PROVINCIAS UNIDAS",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "carignano-florencia",
+    "apellido": "Carignano",
+    "nombre": "Florencia",
+    "distrito": "Santa Fe",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "carrancio-alejandro",
+    "apellido": "Carrancio",
+    "nombre": "Alejandro",
+    "distrito": "Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "casas-sergio-guillermo",
+    "apellido": "Casas",
+    "nombre": "Sergio Guillermo",
+    "distrito": "La Rioja",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "castagneto-carlos-daniel",
+    "apellido": "Castagneto",
+    "nombre": "Carlos Daniel",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "castelnuovo-giselle",
+    "apellido": "Castelnuovo",
+    "nombre": "Giselle",
+    "distrito": "Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "chica-jorge",
+    "apellido": "Chica",
+    "nombre": "Jorge",
+    "distrito": "San Juan",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "chiconi-abel",
+    "apellido": "Chiconi",
+    "nombre": "Abel",
+    "distrito": "San Juan",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "cipolini-gerardo",
+    "apellido": "Cipolini",
+    "nombre": "Gerardo",
+    "distrito": "Chaco",
+    "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "cisneros-carlos",
+    "apellido": "Cisneros",
+    "nombre": "Carlos",
+    "distrito": "Tucumán",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "coletta-mariela",
+    "apellido": "Coletta",
+    "nombre": "Mariela",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "PROVINCIAS UNIDAS",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "correa-llano-facundo",
+    "apellido": "Correa Llano",
+    "nombre": "Facundo",
+    "distrito": "Mendoza",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "daives-ricardo",
+    "apellido": "Daives",
+    "nombre": "Ricardo",
+    "distrito": "Santiago del Estero",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "de-andreis-fernando",
+    "apellido": "de Andreis",
+    "nombre": "Fernando",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "PRO",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "de-la-rosa-maria-graciela",
+    "apellido": "de la Rosa",
+    "nombre": "María Graciela",
+    "distrito": "Formosa",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "de-la-sota-natalia",
+    "apellido": "de la Sota",
+    "nombre": "Natalia",
+    "distrito": "Córdoba",
+    "bloque": "DEFENDAMOS CÓRDOBA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "de-sensi-maria-florencia",
+    "apellido": "De Sensi",
+    "nombre": "María Florencia",
+    "distrito": "Buenos Aires",
+    "bloque": "PRO",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "del-cano-nicolas",
+    "apellido": "del Caño",
+    "nombre": "Nicolás",
+    "distrito": "Buenos Aires",
+    "bloque": "PTS-FRENTE DE IZQUIERDA Y DE TRABAJADORES UNIDAD",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "del-pla-romina",
+    "apellido": "Del Plá",
+    "nombre": "Romina",
+    "distrito": "Buenos Aires",
+    "bloque": "PARTIDO OBRERO EN EL FRENTE DE IZQUIERDA Y DE TRABAJADORES-UNIDAD",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "diaz-fernanda",
+    "apellido": "Díaz",
+    "nombre": "Fernanda",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "diez-romina",
+    "apellido": "Diez",
+    "nombre": "Romina",
+    "distrito": "Santa Fe",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "dolce-sergio",
+    "apellido": "Dolce",
+    "nombre": "Sergio",
+    "distrito": "Chaco",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "emma-nicolas",
+    "apellido": "Emma",
+    "nombre": "Nicolás",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "estevez-gabriela-beatriz",
+    "apellido": "Estévez",
+    "nombre": "Gabriela Beatriz",
+    "distrito": "Córdoba",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "falcone-eduardo",
+    "apellido": "Falcone",
+    "nombre": "Eduardo",
+    "distrito": "Buenos Aires",
+    "bloque": "MID - MOVIMIENTO DE INTEGRACIÓN Y DESARROLLO",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "fargosi-alejandro",
+    "apellido": "Fargosi",
+    "nombre": "Alejandro",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "farias-pablo",
+    "apellido": "Farías",
+    "nombre": "Pablo",
+    "distrito": "Santa Fe",
+    "bloque": "PROVINCIAS UNIDAS",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "felix-emir",
+    "apellido": "Félix",
+    "nombre": "Emir",
+    "distrito": "Mendoza",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "fernandez-elia-marina",
+    "apellido": "Fernández",
+    "nombre": "Elia Marina",
+    "distrito": "Tucumán",
+    "bloque": "INDEPENDENCIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "fernandez-jorge",
+    "apellido": "Fernández",
+    "nombre": "Jorge",
+    "distrito": "San Luis",
+    "bloque": "PRIMERO SAN LUIS",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "fernandez-molero-daiana",
+    "apellido": "Fernández Molero",
+    "nombre": "Daiana",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "PRO",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "ferran-abelardo",
+    "apellido": "Ferrán",
+    "nombre": "Abelardo",
+    "distrito": "La Pampa",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "ferraro-maximiliano",
+    "apellido": "Ferraro",
+    "nombre": "Maximiliano",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "COALICION CIVICA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "ferreyra-alida",
+    "apellido": "Ferreyra",
+    "nombre": "Alida",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2024-01-31",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "figliuolo-sergio",
+    "apellido": "Figliuolo",
+    "nombre": "Sergio",
+    "distrito": "Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "finocchiaro-alejandro",
+    "apellido": "Finocchiaro",
+    "nombre": "Alejandro",
+    "distrito": "Buenos Aires",
+    "bloque": "PRO",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "flores-maria-gabriela",
+    "apellido": "Flores",
+    "nombre": "Maria Gabriela",
+    "distrito": "Salta",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "frade-monica",
+    "apellido": "Frade",
+    "nombre": "Mónica",
+    "distrito": "Buenos Aires",
+    "bloque": "COALICION CIVICA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "fregonese-alicia",
+    "apellido": "Fregonese",
+    "nombre": "Alicia",
+    "distrito": "Entre Ríos",
+    "bloque": "PRO",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "freites-andrea",
+    "apellido": "Freites",
+    "nombre": "Andrea",
+    "distrito": "Tierra del Fuego",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "frias-maira",
+    "apellido": "Frias",
+    "nombre": "Maira",
+    "distrito": "Chubut",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "gallardo-maria-virginia",
+    "apellido": "Gallardo",
+    "nombre": "María Virginia",
+    "distrito": "Corrientes",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "galmarini-sebastian",
+    "apellido": "Galmarini",
+    "nombre": "Sebastián",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "garcia-alvaro",
+    "apellido": "García",
+    "nombre": "Álvaro",
+    "distrito": "Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "garcia-carlos",
+    "apellido": "García",
+    "nombre": "Carlos",
+    "distrito": "Chaco",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "garcia-maria-teresa",
+    "apellido": "García",
+    "nombre": "María Teresa",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "garcia-aresca-ignacio",
+    "apellido": "García Aresca",
+    "nombre": "Ignacio",
+    "distrito": "Córdoba",
+    "bloque": "PROVINCIAS UNIDAS",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "garrido-jose-luis",
+    "apellido": "Garrido",
+    "nombre": "José Luis",
+    "distrito": "Santa Cruz",
+    "bloque": "POR SANTA CRUZ",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "giampieri-antonela",
+    "apellido": "Giampieri",
+    "nombre": "Antonela",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "PRO",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "giordano-juan-carlos",
+    "apellido": "Giordano",
+    "nombre": "Juan Carlos",
+    "distrito": "Buenos Aires",
+    "bloque": "IZQUIERDA SOCIALISTA - FRENTE DE IZQUIERDA UNIDAD",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2026-08-26",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "giudici-silvana",
+    "apellido": "Giudici",
+    "nombre": "Silvana",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "giuliano-diego-a",
+    "apellido": "Giuliano",
+    "nombre": "Diego A.",
+    "distrito": "Santa Fe",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "glinski-jose",
+    "apellido": "Glinski",
+    "nombre": "José",
+    "distrito": "Chubut",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "goitia-rosario",
+    "apellido": "Goitia",
+    "nombre": "Rosario",
+    "distrito": "Chaco",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "gomez-jose",
+    "apellido": "Gomez",
+    "nombre": "José",
+    "distrito": "Santiago del Estero",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "gonzales-alfredo",
+    "apellido": "Gonzales",
+    "nombre": "Alfredo",
+    "distrito": "Jujuy",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "gonzalez-alvaro",
+    "apellido": "González",
+    "nombre": "Álvaro",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "PRO",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "gonzalez-diogenes-ignacio",
+    "apellido": "González",
+    "nombre": "Diógenes Ignacio",
+    "distrito": "Corrientes",
+    "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "gonzalez-gerardo-gustavo",
+    "apellido": "González",
+    "nombre": "Gerardo Gustavo",
+    "distrito": "Formosa",
+    "bloque": "ARGENTINA FEDERAL",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "gonzalez-estevarena-maria-luisa",
+    "apellido": "González Estevarena",
+    "nombre": "María Luisa",
+    "distrito": "Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "grabois-juan",
+    "apellido": "Grabois",
+    "nombre": "Juan",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "gruber-maura",
+    "apellido": "Gruber",
+    "nombre": "Maura",
+    "distrito": "Misiones",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "gutierrez-carlos",
+    "apellido": "Gutiérrez",
+    "nombre": "Carlos",
+    "distrito": "Córdoba",
+    "bloque": "PROVINCIAS UNIDAS",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "gutierrez-ramiro",
+    "apellido": "Gutiérrez",
+    "nombre": "Ramiro",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "guzman-jairo",
+    "apellido": "Guzmán",
+    "nombre": "Jairo",
+    "distrito": "Santa Cruz",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "hadad-raul",
+    "apellido": "Hadad",
+    "nombre": "Raúl",
+    "distrito": "Corrientes",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "hagman-itai",
+    "apellido": "Hagman",
+    "nombre": "Itai",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "hartfield-diego",
+    "apellido": "Hartfield",
+    "nombre": "Diego",
+    "distrito": "Misiones",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "herrera-ahuad-oscar-a",
+    "apellido": "Herrera Ahuad",
+    "nombre": "Oscar A.",
+    "distrito": "Misiones",
+    "bloque": "ARGENTINA FEDERAL",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "holzman-patricia",
+    "apellido": "Holzman",
+    "nombre": "Patricia",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "huesen-gerardo",
+    "apellido": "Huesen",
+    "nombre": "Gerardo",
+    "distrito": "Tucumán",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "humenuk-gladys",
+    "apellido": "Humenuk",
+    "nombre": "Gladys",
+    "distrito": "Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "ianni-ana-maria",
+    "apellido": "Ianni",
+    "nombre": "Ana María",
+    "distrito": "Santa Cruz",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "ibanez-maria-cecilia",
+    "apellido": "Ibañez",
+    "nombre": "María Cecilia",
+    "distrito": "Córdoba",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "jaime-quiroga-carlos-gustavo",
+    "apellido": "Jaime Quiroga",
+    "nombre": "Carlos Gustavo",
+    "distrito": "San Juan",
+    "bloque": "PRODUCCION Y TRABAJO",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "juliano-pablo",
+    "apellido": "Juliano",
+    "nombre": "Pablo",
+    "distrito": "Buenos Aires",
+    "bloque": "PROVINCIAS UNIDAS",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "kirchner-maximo-carlos",
+    "apellido": "Kirchner",
+    "nombre": "Máximo Carlos",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "lanesan-sancho-moira",
+    "apellido": "Lanesan Sancho",
+    "nombre": "Moira",
+    "distrito": "Santa Cruz",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "laumann-andres-ariel",
+    "apellido": "Laumann",
+    "nombre": "Andrés Ariel",
+    "distrito": "Entre Ríos",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "leiva-aldo",
+    "apellido": "Leiva",
+    "nombre": "Aldo",
+    "distrito": "Chaco",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "lemoine-lilia",
+    "apellido": "Lemoine",
+    "nombre": "Lilia",
+    "distrito": "Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "leone-andres",
+    "apellido": "Leone",
+    "nombre": "Andrés",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "llano-mercedes",
+    "apellido": "Llano",
+    "nombre": "Mercedes",
+    "distrito": "Mendoza",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "lluch-enrique",
+    "apellido": "Lluch",
+    "nombre": "Enrique",
+    "distrito": "Córdoba",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "longo-johanna-sabrina",
+    "apellido": "Longo",
+    "nombre": "Johanna Sabrina",
+    "distrito": "Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "lopez-jimena",
+    "apellido": "López",
+    "nombre": "Jimena",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "lopez-pasquali-cecilia",
+    "apellido": "López Pasquali",
+    "nombre": "Cecilia",
+    "distrito": "Santiago del Estero",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "lousteau-martin",
+    "apellido": "Lousteau",
+    "nombre": "Martín",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "PROVINCIAS UNIDAS",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "luque-juan-pablo",
+    "apellido": "Luque",
+    "nombre": "Juan Pablo",
+    "distrito": "Chubut",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "macyszyn-lorena",
+    "apellido": "Macyszyn",
+    "nombre": "Lorena",
+    "distrito": "Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "mango-marcelo",
+    "apellido": "Mango",
+    "nombre": "Marcelo",
+    "distrito": "Río Negro",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "manrique-mario",
+    "apellido": "Manrique",
+    "nombre": "Mario",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "marclay-marianela",
+    "apellido": "Marclay",
+    "nombre": "Marianela",
+    "distrito": "Entre Ríos",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "marin-varinia-lis",
+    "apellido": "Marín",
+    "nombre": "Varinia Lis",
+    "distrito": "La Pampa",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "marino-juan",
+    "apellido": "Marino",
+    "nombre": "Juan",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "martinez-alvaro",
+    "apellido": "Martínez",
+    "nombre": "Álvaro",
+    "distrito": "Mendoza",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "martinez-german-pedro",
+    "apellido": "Martínez",
+    "nombre": "Germán Pedro",
+    "distrito": "Santa Fe",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "massot-nicolas",
+    "apellido": "Massot",
+    "nombre": "Nicolás",
+    "distrito": "Buenos Aires",
+    "bloque": "ENCUENTRO FEDERAL",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "matzkin-martin",
+    "apellido": "Matzkin",
+    "nombre": "Martín",
+    "distrito": "La Pampa",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2026-06-24",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "maureira-karina",
+    "apellido": "Maureira",
+    "nombre": "Karina",
+    "distrito": "Neuquén",
+    "bloque": "LA NEUQUINIDAD",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "mayoraz-nicolas",
+    "apellido": "Mayoraz",
+    "nombre": "Nicolás",
+    "distrito": "Santa Fe",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "medina-gladys",
+    "apellido": "Medina",
+    "nombre": "Gladys",
+    "distrito": "Tucumán",
+    "bloque": "INDEPENDENCIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "menem-martin",
+    "apellido": "Menem",
+    "nombre": "Martín",
+    "distrito": "La Rioja",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "metral-asensio-julieta",
+    "apellido": "Metral Asensio",
+    "nombre": "Julieta",
+    "distrito": "Mendoza",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "michel-guillermo",
+    "apellido": "Michel",
+    "nombre": "Guillermo",
+    "distrito": "Entre Ríos",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "mino-fernanda",
+    "apellido": "Miño",
+    "nombre": "Fernanda",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "molina-juan-carlos",
+    "apellido": "Molina",
+    "nombre": "Juan Carlos",
+    "distrito": "Santa Cruz",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "molinuevo-soledad",
+    "apellido": "Molinuevo",
+    "nombre": "Soledad",
+    "distrito": "Tucumán",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "molle-matias",
+    "apellido": "Molle",
+    "nombre": "Matías",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "mondaca-soledad",
+    "apellido": "Mondaca",
+    "nombre": "Soledad",
+    "distrito": "Neuquén",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "monguillot-fernando",
+    "apellido": "Monguillot",
+    "nombre": "Fernando",
+    "distrito": "Catamarca",
+    "bloque": "ELIJO CATAMARCA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "montenegro-guillermo",
+    "apellido": "Montenegro",
+    "nombre": "Guillermo",
+    "distrito": "Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "montenegro-juan-pablo",
+    "apellido": "Montenegro",
+    "nombre": "Juan Pablo",
+    "distrito": "Santa Fe",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "monzon-roxana",
+    "apellido": "Monzón",
+    "nombre": "Roxana",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "morchio-francisco",
+    "apellido": "Morchio",
+    "nombre": "Francisco",
+    "distrito": "Entre Ríos",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "moreau-cecilia",
+    "apellido": "Moreau",
+    "nombre": "Cecilia",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "moreno-ovalle-julio",
+    "apellido": "Moreno Ovalle",
+    "nombre": "Julio",
+    "distrito": "Salta",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "moyano-hugo-antonio",
+    "apellido": "Moyano",
+    "nombre": "Hugo Antonio",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "mukdise-jorge",
+    "apellido": "Mukdise",
+    "nombre": "Jorge",
+    "distrito": "Santiago del Estero",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "munoz-gabriela-luciana",
+    "apellido": "Muñoz",
+    "nombre": "Gabriela Luciana",
+    "distrito": "Neuquén",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "neder-estela-mary",
+    "apellido": "Neder",
+    "nombre": "Estela Mary",
+    "distrito": "Santiago del Estero",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "nieri-lisandro",
+    "apellido": "Nieri",
+    "nombre": "Lisandro",
+    "distrito": "Mendoza",
+    "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "niveyro-miriam",
+    "apellido": "Niveyro",
+    "nombre": "Miriam",
+    "distrito": "Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "noblega-sebastian",
+    "apellido": "Nóblega",
+    "nombre": "Sebastián",
+    "distrito": "Catamarca",
+    "bloque": "ELIJO CATAMARCA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "noguera-javier",
+    "apellido": "Noguera",
+    "nombre": "Javier",
+    "distrito": "Tucumán",
+    "bloque": "INDEPENDENCIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "nunez-jose",
+    "apellido": "Nuñez",
+    "nombre": "José",
+    "distrito": "Santa Fe",
+    "bloque": "PROVINCIAS UNIDAS",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "ojeda-joaquin",
+    "apellido": "Ojeda",
+    "nombre": "Joaquín",
+    "distrito": "Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "olmos-kelly",
+    "apellido": "Olmos",
+    "nombre": "Kelly",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "osuna-blanca-ines",
+    "apellido": "Osuna",
+    "nombre": "Blanca Inés",
+    "distrito": "Entre Ríos",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "outes-pablo",
+    "apellido": "Outes",
+    "nombre": "Pablo",
+    "distrito": "Salta",
+    "bloque": "ARGENTINA FEDERAL",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "pagano-marcela-marina",
+    "apellido": "Pagano",
+    "nombre": "Marcela Marina",
+    "distrito": "Buenos Aires",
+    "bloque": "COHERENCIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "palazzo-sergio-omar",
+    "apellido": "Palazzo",
+    "nombre": "Sergio Omar",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "palladino-claudia-maria",
+    "apellido": "Palladino",
+    "nombre": "Claudia María",
+    "distrito": "Catamarca",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "pareja-sebastian",
+    "apellido": "Pareja",
+    "nombre": "Sebastián",
+    "distrito": "Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "parola-maria-graciela",
+    "apellido": "Parola",
+    "nombre": "María Graciela",
+    "distrito": "Formosa",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "patino-brizuela-marcos",
+    "apellido": "Patiño Brizuela",
+    "nombre": "Marcos",
+    "distrito": "Córdoba",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "pauli-santiago",
+    "apellido": "Pauli",
+    "nombre": "Santiago",
+    "distrito": "Tierra del Fuego",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "paulon-esteban",
+    "apellido": "Paulón",
+    "nombre": "Esteban",
+    "distrito": "Santa Fe",
+    "bloque": "PROVINCIAS UNIDAS",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "pedrali-gabriela",
+    "apellido": "Pedrali",
+    "nombre": "Gabriela",
+    "distrito": "La Rioja",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "pellegrini-agustin",
+    "apellido": "Pellegrini",
+    "nombre": "Agustín",
+    "distrito": "Santa Fe",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "pelli-federico-agustin",
+    "apellido": "Pelli",
+    "nombre": "Federico Agustín",
+    "distrito": "Tucumán",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "peluc-jose",
+    "apellido": "Peluc",
+    "nombre": "José",
+    "distrito": "San Juan",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "penacca-paula-andrea",
+    "apellido": "Penacca",
+    "nombre": "Paula Andrea",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "petri-luis",
+    "apellido": "Petri",
+    "nombre": "Luis",
+    "distrito": "Mendoza",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "petrovich-maria-lorena",
+    "apellido": "Petrovich",
+    "nombre": "María Lorena",
+    "distrito": "Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "picat-luis-albino",
+    "apellido": "Picat",
+    "nombre": "Luis Albino",
+    "distrito": "Córdoba",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "pichetto-miguel-angel",
+    "apellido": "Pichetto",
+    "nombre": "Miguel Ángel",
+    "distrito": "Buenos Aires",
+    "bloque": "ENCUENTRO FEDERAL",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "picon-martinez-nancy-viviana",
+    "apellido": "Picón Martínez",
+    "nombre": "Nancy Viviana",
+    "distrito": "San Juan",
+    "bloque": "PRODUCCION Y TRABAJO",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "pietragalla-corti-horacio",
+    "apellido": "Pietragalla Corti",
+    "nombre": "Horacio",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "pokoik-lorena",
+    "apellido": "Pokoik",
+    "nombre": "Lorena",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "ponce-maria-celeste",
+    "apellido": "Ponce",
+    "nombre": "María Celeste",
+    "distrito": "Córdoba",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "potenza-luciana",
+    "apellido": "Potenza",
+    "nombre": "Luciana",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "propato-agustina-lucrecia",
+    "apellido": "Propato",
+    "nombre": "Agustina Lucrecia",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "quintar-manuel",
+    "apellido": "Quintar",
+    "nombre": "Manuel",
+    "distrito": "Jujuy",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "rauschenberger-ariel",
+    "apellido": "Rauschenberger",
+    "nombre": "Ariel",
+    "distrito": "La Pampa",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "ravera-valentina",
+    "apellido": "Ravera",
+    "nombre": "Valentina",
+    "distrito": "Santa Fe",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "razzini-veronica",
+    "apellido": "Razzini",
+    "nombre": "Verónica",
+    "distrito": "Santa Fe",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "reichardt-karen",
+    "apellido": "Reichardt",
+    "nombre": "Karen",
+    "distrito": "Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "riesco-gaston",
+    "apellido": "Riesco",
+    "nombre": "Gastón",
+    "distrito": "Neuquén",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "ritondo-cristian-a",
+    "apellido": "Ritondo",
+    "nombre": "Cristian A.",
+    "distrito": "Buenos Aires",
+    "bloque": "PRO",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "rizzotti-jorge",
+    "apellido": "Rizzotti",
+    "nombre": "Jorge",
+    "distrito": "Jujuy",
+    "bloque": "PROVINCIAS UNIDAS",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "roberto-santiago-luis",
+    "apellido": "Roberto",
+    "nombre": "Santiago Luis",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "roca-gonzalo",
+    "apellido": "Roca",
+    "nombre": "Gonzalo",
+    "distrito": "Córdoba",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "rodriguez-miguel",
+    "apellido": "Rodríguez",
+    "nombre": "Miguel",
+    "distrito": "Tierra del Fuego",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "rodriguez-machado-laura-elena",
+    "apellido": "Rodríguez Machado",
+    "nombre": "Laura Elena",
+    "distrito": "Córdoba",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "rossi-agustin-oscar",
+    "apellido": "Rossi",
+    "nombre": "Agustín Oscar",
+    "distrito": "Santa Fe",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "ruiz-yamila",
+    "apellido": "Ruíz",
+    "nombre": "Yamila",
+    "distrito": "Misiones",
+    "bloque": "ARGENTINA FEDERAL",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "salzmann-marina-dorotea",
+    "apellido": "Salzmann",
+    "nombre": "Marina Dorotea",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "sanchez-wrba-javier",
+    "apellido": "Sánchez Wrba",
+    "nombre": "Javier",
+    "distrito": "Buenos Aires",
+    "bloque": "PRO",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "sand-nancy",
+    "apellido": "Sand",
+    "nombre": "Nancy",
+    "distrito": "Corrientes",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "santillan-juarez-brahim-juliana",
+    "apellido": "Santillán Juárez Brahim",
+    "nombre": "Juliana",
+    "distrito": "Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "santurio-santiago",
+    "apellido": "Santurio",
+    "nombre": "Santiago",
+    "distrito": "Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "scaglia-gisela",
+    "apellido": "Scaglia",
+    "nombre": "Gisela",
+    "distrito": "Santa Fe",
+    "bloque": "PROVINCIAS UNIDAS",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "schiaretti-juan",
+    "apellido": "Schiaretti",
+    "nombre": "Juan",
+    "distrito": "Córdoba",
+    "bloque": "PROVINCIAS UNIDAS",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2026-02-12",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "schneider-dario",
+    "apellido": "Schneider",
+    "nombre": "Darío",
+    "distrito": "Entre Ríos",
+    "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "selva-sabrina",
+    "apellido": "Selva",
+    "nombre": "Sabrina",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "serquis-adriana-cristina",
+    "apellido": "Serquis",
+    "nombre": "Adriana Cristina",
+    "distrito": "Río Negro",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "siley-vanesa-raquel",
+    "apellido": "Siley",
+    "nombre": "Vanesa Raquel",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "snopek-guillermo",
+    "apellido": "Snopek",
+    "nombre": "Guillermo",
+    "distrito": "Jujuy",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "soldano-laura",
+    "apellido": "Soldano",
+    "nombre": "Laura",
+    "distrito": "Córdoba",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "strada-julia",
+    "apellido": "Strada",
+    "nombre": "Julia",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "taiana-jorge",
+    "apellido": "Taiana",
+    "nombre": "Jorge",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "tailhade-rodolfo",
+    "apellido": "Tailhade",
+    "nombre": "Rodolfo",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "tepp-caren",
+    "apellido": "Tepp",
+    "nombre": "Caren",
+    "distrito": "Santa Fe",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "tita-paulo-agustin",
+    "apellido": "Tita",
+    "nombre": "Paulo Agustín",
+    "distrito": "Tierra del Fuego",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "todero-pablo",
+    "apellido": "Todero",
+    "nombre": "Pablo",
+    "distrito": "Neuquén",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "tolosa-paz-victoria",
+    "apellido": "Tolosa Paz",
+    "nombre": "Victoria",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "tomassoni-yamile",
+    "apellido": "Tomassoni",
+    "nombre": "Yamile",
+    "distrito": "Santa Fe",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "torres-alejandra",
+    "apellido": "Torres",
+    "nombre": "Alejandra",
+    "distrito": "Córdoba",
+    "bloque": "PROVINCIAS UNIDAS",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "torres-ruben-dario",
+    "apellido": "Torres",
+    "nombre": "Rubén Darío",
+    "distrito": "Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "tortoriello-anibal",
+    "apellido": "Tortoriello",
+    "nombre": "Aníbal",
+    "distrito": "Río Negro",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "tournier-jose-federico",
+    "apellido": "Tournier",
+    "nombre": "José Federico",
+    "distrito": "Corrientes",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2024-08-14",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "treffinger-cesar",
+    "apellido": "Treffinger",
+    "nombre": "César",
+    "distrito": "Chubut",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "trotta-nicolas-alfredo",
+    "apellido": "Trotta",
+    "nombre": "Nicolás Alfredo",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "urien-hernan",
+    "apellido": "Urien",
+    "nombre": "Hernán",
+    "distrito": "Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "valdes-eduardo-felix",
+    "apellido": "Valdés",
+    "nombre": "Eduardo Félix",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "vancsik-daniel",
+    "apellido": "Vancsik",
+    "nombre": "Daniel",
+    "distrito": "Misiones",
+    "bloque": "ARGENTINA FEDERAL",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "vasquez-patricia",
+    "apellido": "Vásquez",
+    "nombre": "Patricia",
+    "distrito": "Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "vega-yolanda",
+    "apellido": "Vega",
+    "nombre": "Yolanda",
+    "distrito": "Salta",
+    "bloque": "ARGENTINA FEDERAL",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "velazquez-m-elena",
+    "apellido": "Velázquez",
+    "nombre": "M. Elena",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "vera-andrea-fernanda",
+    "apellido": "Vera",
+    "nombre": "Andrea Fernanda",
+    "distrito": "Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "verasay-pamela-fernanda",
+    "apellido": "Verasay",
+    "nombre": "Pamela Fernanda",
+    "distrito": "Mendoza",
+    "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "villaverde-lorena",
+    "apellido": "Villaverde",
+    "nombre": "Lorena",
+    "distrito": "Río Negro",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "visconti-gino",
+    "apellido": "Visconti",
+    "nombre": "Gino",
+    "distrito": "La Rioja",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "volnovich-luana",
+    "apellido": "Volnovich",
+    "nombre": "Luana",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "yasky-hugo",
+    "apellido": "Yasky",
+    "nombre": "Hugo",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "yedlin-pablo-raul",
+    "apellido": "Yedlin",
+    "nombre": "Pablo Raúl",
+    "distrito": "Tucumán",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "yeza-martin",
+    "apellido": "Yeza",
+    "nombre": "Martín",
+    "distrito": "Buenos Aires",
+    "bloque": "PRO",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "zago-oscar",
+    "apellido": "Zago",
+    "nombre": "Oscar",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "MID - MOVIMIENTO DE INTEGRACIÓN Y DESARROLLO",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "zapata-carlos-raul",
+    "apellido": "Zapata",
+    "nombre": "Carlos Raúl",
+    "distrito": "Salta",
+    "bloque": "LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "zaracho-natalia",
+    "apellido": "Zaracho",
+    "nombre": "Natalia",
+    "distrito": "Buenos Aires",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   },
+   {
+    "id": "zigaran-maria-ines",
+    "apellido": "Zigarán",
+    "nombre": "María Inés",
+    "distrito": "Jujuy",
+    "bloque": "PROVINCIAS UNIDAS",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2029-12-09"
+   },
+   {
+    "id": "zulli-christian-alejandro",
+    "apellido": "Zulli",
+    "nombre": "Christian Alejandro",
+    "distrito": "Corrientes",
+    "bloque": "UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09"
+   }
+  ],
+  "actualizado": "2026-10-07T21:17:22.799273",
+  "url": "https://datos.hcdn.gob.ar/dataset/a80e0fa7-d73a-4ed1-9dec-80465e368951/resource/bed68ccd-81f4-4165-89b5-2b3ff9720cac/download/diputados_actuales2.2.csv"
+ },
+ "personalDiputados": {
+  "total": 1606,
+  "categorias": {
+   "1": 90,
+   "2": 70,
+   "3": 591,
+   "4": 167,
+   "5": 228,
+   "6": 241,
+   "7": 47,
+   "8": 166,
+   "9": 4,
+   "12": 1,
+   "13": 1
+  },
+  "actualizado": "2026-08-07T19:07:23.022801",
+  "url": "https://datos.hcdn.gob.ar/dataset/af7136d5-84eb-49b2-af2e-aaf6319e4aae/resource/6e49506e-6757-44cd-94e9-0e75f3bd8c38/download/nomina3.7.csv"
+ },
+ "senadores": {
+  "lista": [
+   {
+    "id": "546",
+    "apellido": "Abad",
+    "nombre": "Maximiliano",
+    "distrito": "Buenos Aires",
+    "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+    "partido": "JUNTOS POR EL CAMBIO",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/546.gif",
+    "personal": {
+     "total": 14,
+     "categorias": {
+      "1": 3,
+      "2": 2,
+      "3": 5,
+      "4": 1,
+      "5": 1,
+      "7": 1,
+      "9": 1
+     }
+    }
+   },
+   {
+    "id": "564",
+    "apellido": "Abdala",
+    "nombre": "Bartolomé Esteban",
+    "distrito": "San Luis",
+    "bloque": "LA LIBERTAD AVANZA",
+    "partido": "ALIANZA LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/564.gif",
+    "personal": {
+     "total": 12,
+     "categorias": {
+      "1": 3,
+      "3": 2,
+      "4": 1,
+      "5": 2,
+      "6": 2,
+      "12": 2
+     }
+    }
+   },
+   {
+    "id": "583",
+    "apellido": "Almeida",
+    "nombre": "Romina María",
+    "distrito": "Entre Ríos",
+    "bloque": "LA LIBERTAD AVANZA",
+    "partido": "ALIANZA LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/583.gif",
+    "personal": {
+     "total": 6,
+     "categorias": {
+      "1": 1,
+      "2": 3,
+      "3": 1,
+      "14": 1
+     }
+    }
+   },
+   {
+    "id": "522",
+    "apellido": "Alvarez Rivero",
+    "nombre": "Carmen",
+    "distrito": "Córdoba",
+    "bloque": "LA LIBERTAD AVANZA",
+    "partido": "JUNTOS POR EL CAMBIO",
+    "inicioMandato": "2021-12-10",
+    "inicio": "2021-12-10",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/522.gif",
+    "personal": {
+     "total": 5,
+     "categorias": {
+      "1": 4,
+      "4": 1
+     }
+    }
+   },
+   {
+    "id": "519",
+    "apellido": "Andrada",
+    "nombre": "Guillermo Eduardo",
+    "distrito": "Catamarca",
+    "bloque": "CONVICCIÓN FEDERAL",
+    "partido": "FRENTE DE TODOS",
+    "inicioMandato": "2021-12-10",
+    "inicio": "2021-12-10",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/519.gif",
+    "personal": {
+     "total": 14,
+     "categorias": {
+      "1": 5,
+      "3": 2,
+      "4": 1,
+      "7": 1,
+      "8": 1,
+      "12": 1,
+      "14": 3
+     }
+    }
+   },
+   {
+    "id": "558",
+    "apellido": "Arce",
+    "nombre": "Carlos Omar",
+    "distrito": "Misiones",
+    "bloque": "MOVIMIENTO POR MISIONES",
+    "partido": "FRENTE RENOVADOR DE LA CONCORDIA-INNOVACIÓN FEDERAL",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/558.gif",
+    "personal": {
+     "total": 6,
+     "categorias": {
+      "1": 4,
+      "2": 1,
+      "6": 1
+     }
+    }
+   },
+   {
+    "id": "565",
+    "apellido": "Arrascaeta",
+    "nombre": "Ivanna Marcela",
+    "distrito": "San Luis",
+    "bloque": "LA LIBERTAD AVANZA",
+    "partido": "ALIANZA LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/565.gif",
+    "personal": {
+     "total": 13,
+     "categorias": {
+      "1": 9,
+      "4": 2,
+      "5": 1,
+      "8": 1
+     }
+    }
+   },
+   {
+    "id": "552",
+    "apellido": "Atauche",
+    "nombre": "Ezequiel",
+    "distrito": "Jujuy",
+    "bloque": "LA LIBERTAD AVANZA",
+    "partido": "PARTIDO RENOVADOR FEDERAL",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/552.gif",
+    "personal": {
+     "total": 8,
+     "categorias": {
+      "1": 3,
+      "2": 1,
+      "4": 1,
+      "5": 3
+     }
+    }
+   },
+   {
+    "id": "541",
+    "apellido": "Avila",
+    "nombre": "Beatriz Luisa",
+    "distrito": "Tucumán",
+    "bloque": "INDEPENDENCIA",
+    "partido": "JUNTOS POR EL CAMBIO",
+    "inicioMandato": "2021-12-10",
+    "inicio": "2021-12-10",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/541.gif",
+    "personal": {
+     "total": 13,
+     "categorias": {
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 1,
+      "6": 2,
+      "7": 4,
+      "8": 1,
+      "9": 1
+     }
+    }
+   },
+   {
+    "id": "584",
+    "apellido": "Bahl",
+    "nombre": "Adán Humberto",
+    "distrito": "Entre Ríos",
+    "bloque": "JUSTICIALISTA",
+    "partido": "FUERZA ENTRE RÍOS",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/584.gif",
+    "personal": {
+     "total": 8,
+     "categorias": {
+      "1": 5,
+      "6": 1,
+      "8": 1,
+      "13": 1
+     }
+    }
+   },
+   {
+    "id": "553",
+    "apellido": "Bedia",
+    "nombre": "Vilma Facunda",
+    "distrito": "Jujuy",
+    "bloque": "LA LIBERTAD AVANZA",
+    "partido": "PARTIDO RENOVADOR FEDERAL",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/553.gif",
+    "personal": {
+     "total": 10,
+     "categorias": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 3,
+      "5": 1,
+      "6": 2,
+      "12": 1
+     }
+    }
+   },
+   {
+    "id": "582",
+    "apellido": "Benegas Lynch",
+    "nombre": "Joaquín Alberto",
+    "distrito": "Entre Ríos",
+    "bloque": "LA LIBERTAD AVANZA",
+    "partido": "ALIANZA LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/582.gif",
+    "personal": {
+     "total": 3,
+     "categorias": {
+      "1": 2,
+      "4": 1
+     }
+    }
+   },
+   {
+    "id": "532",
+    "apellido": "Bensusán",
+    "nombre": "Daniel Pablo",
+    "distrito": "La Pampa",
+    "bloque": "JUSTICIALISTA",
+    "partido": "FRENTE DE TODOS",
+    "inicioMandato": "2021-12-10",
+    "inicio": "2021-12-10",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/532.gif",
+    "personal": {
+     "total": 11,
+     "categorias": {
+      "1": 4,
+      "2": 1,
+      "4": 2,
+      "5": 2,
+      "7": 1,
+      "10": 1
+     }
+    }
+   },
+   {
+    "id": "580",
+    "apellido": "Bullrich",
+    "nombre": "Patricia",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "partido": "ALIANZA LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/580.gif",
+    "personal": {
+     "total": 5,
+     "categorias": {
+      "1": 3,
+      "4": 1,
+      "6": 1
+     }
+    }
+   },
+   {
+    "id": "285",
+    "apellido": "Capitanich",
+    "nombre": "Jorge Milton",
+    "distrito": "Chaco",
+    "bloque": "JUSTICIALISTA",
+    "partido": "FUERZA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/285.gif",
+    "personal": {
+     "total": 18,
+     "categorias": {
+      "1": 9,
+      "2": 4,
+      "3": 2,
+      "5": 1,
+      "7": 1,
+      "14": 1
+     }
+    }
+   },
+   {
+    "id": "567",
+    "apellido": "Carambia",
+    "nombre": "José María",
+    "distrito": "Santa Cruz",
+    "bloque": "MOVERE SANTA CRUZ",
+    "partido": "ALIANZA POR SANTA CRUZ",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/567.gif",
+    "personal": {
+     "total": 6,
+     "categorias": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "5": 1,
+      "6": 1
+     }
+    }
+   },
+   {
+    "id": "586",
+    "apellido": "Cervi",
+    "nombre": "Mario Pablo",
+    "distrito": "Neuquén",
+    "bloque": "LA LIBERTAD AVANZA",
+    "partido": "ALIANZA LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/586.gif",
+    "personal": {
+     "total": 9,
+     "categorias": {
+      "2": 2,
+      "3": 3,
+      "4": 1,
+      "7": 2,
+      "10": 1
+     }
+    }
+   },
+   {
+    "id": "398",
+    "apellido": "Corpacci",
+    "nombre": "Lucía Benigna",
+    "distrito": "Catamarca",
+    "bloque": "JUSTICIALISTA",
+    "partido": "FRENTE DE TODOS",
+    "inicioMandato": "2021-12-10",
+    "inicio": "2021-12-10",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/398.gif",
+    "personal": {
+     "total": 14,
+     "categorias": {
+      "1": 5,
+      "2": 1,
+      "3": 2,
+      "6": 4,
+      "8": 1,
+      "10": 1
+     }
+    }
+   },
+   {
+    "id": "587",
+    "apellido": "Corroza",
+    "nombre": "Julieta",
+    "distrito": "Neuquén",
+    "bloque": "LA NEUQUINIDAD",
+    "partido": "LA NEUQUINIDAD",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/587.gif",
+    "personal": {
+     "total": 8,
+     "categorias": {
+      "1": 1,
+      "2": 4,
+      "3": 3
+     }
+    }
+   },
+   {
+    "id": "595",
+    "apellido": "Coto",
+    "nombre": "Agustín Pedro",
+    "distrito": "Tierra del Fuego",
+    "bloque": "LA LIBERTAD AVANZA",
+    "partido": "ALIANZA LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/595.gif",
+    "personal": {
+     "total": 11,
+     "categorias": {
+      "1": 6,
+      "4": 2,
+      "5": 2,
+      "6": 1
+     }
+    }
+   },
+   {
+    "id": "570",
+    "apellido": "Cristina",
+    "nombre": "Andrea Marcela",
+    "distrito": "Chubut",
+    "bloque": "FRENTE PRO",
+    "partido": "JUNTOS POR EL CAMBIO CHUBUT",
+    "inicioMandato": "2021-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/570.gif",
+    "personal": {
+     "total": 6,
+     "categorias": {
+      "1": 2,
+      "3": 1,
+      "5": 1,
+      "6": 1,
+      "8": 1
+     }
+    }
+   },
+   {
+    "id": "545",
+    "apellido": "De Pedro",
+    "nombre": "Eduardo Enrique",
+    "distrito": "Buenos Aires",
+    "bloque": "JUSTICIALISTA",
+    "partido": "ALIANZA UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/545.gif",
+    "personal": {
+     "total": 14,
+     "categorias": {
+      "1": 1,
+      "2": 4,
+      "3": 6,
+      "5": 2,
+      "7": 1
+     }
+    }
+   },
+   {
+    "id": "517",
+    "apellido": "Di Tullio",
+    "nombre": "Juliana",
+    "distrito": "Buenos Aires",
+    "bloque": "JUSTICIALISTA",
+    "partido": "ALIANZA UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/517.gif",
+    "personal": {
+     "total": 8,
+     "categorias": {
+      "1": 4,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "8": 1
+     }
+    }
+   },
+   {
+    "id": "461",
+    "apellido": "Espínola",
+    "nombre": "Carlos Mauricio",
+    "distrito": "Corrientes",
+    "bloque": "PROVINCIAS UNIDAS",
+    "partido": "FRENTE TODOS",
+    "inicioMandato": "2021-12-10",
+    "inicio": "2021-12-10",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/461.gif",
+    "personal": {
+     "total": 19,
+     "categorias": {
+      "1": 2,
+      "2": 3,
+      "3": 9,
+      "7": 1,
+      "8": 1,
+      "10": 1,
+      "11": 1,
+      "14": 1
+     }
+    }
+   },
+   {
+    "id": "520",
+    "apellido": "Fama",
+    "nombre": "Flavio Sergio",
+    "distrito": "Catamarca",
+    "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+    "partido": "JUNTOS POR EL CAMBIO",
+    "inicioMandato": "2021-12-10",
+    "inicio": "2021-12-10",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/520.gif",
+    "personal": {
+     "total": 11,
+     "categorias": {
+      "1": 3,
+      "2": 4,
+      "4": 2,
+      "6": 1,
+      "8": 1
+     }
+    }
+   },
+   {
+    "id": "468",
+    "apellido": "Fernández Sagasti",
+    "nombre": "Anabel",
+    "distrito": "Mendoza",
+    "bloque": "JUSTICIALISTA",
+    "partido": "JUSTICIALISTA",
+    "inicioMandato": "2021-12-10",
+    "inicio": "2021-12-10",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/468.gif",
+    "personal": {
+     "total": 16,
+     "categorias": {
+      "1": 6,
+      "2": 2,
+      "3": 2,
+      "6": 1,
+      "7": 3,
+      "8": 1,
+      "9": 1
+     }
+    }
+   },
+   {
+    "id": "590",
+    "apellido": "Fullone",
+    "nombre": "Enzo Paolo",
+    "distrito": "Río Negro",
+    "bloque": "LA LIBERTAD AVANZA",
+    "partido": "ALIANZA LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-26",
+    "inicio": "2025-12-26",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/590.gif",
+    "personal": {
+     "total": 10,
+     "categorias": {
+      "1": 3,
+      "2": 3,
+      "3": 1,
+      "5": 1,
+      "6": 2
+     }
+    }
+   },
+   {
+    "id": "568",
+    "apellido": "Gadano",
+    "nombre": "Natalia Elena",
+    "distrito": "Santa Cruz",
+    "bloque": "MOVERE SANTA CRUZ",
+    "partido": "ALIANZA POR SANTA CRUZ",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/568.gif",
+    "personal": {
+     "total": 14,
+     "categorias": {
+      "1": 3,
+      "2": 3,
+      "3": 2,
+      "5": 2,
+      "6": 2,
+      "7": 1,
+      "12": 1
+     }
+    }
+   },
+   {
+    "id": "573",
+    "apellido": "Galaretto",
+    "nombre": "Eduardo Horacio",
+    "distrito": "Santa Fe",
+    "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+    "partido": "JUNTOS POR EL CAMBIO",
+    "inicioMandato": "2021-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/573.gif",
+    "personal": {
+     "total": 16,
+     "categorias": {
+      "1": 5,
+      "2": 5,
+      "3": 1,
+      "4": 4,
+      "9": 1
+     }
+    }
+   },
+   {
+    "id": "562",
+    "apellido": "Giménez Navarro",
+    "nombre": "María Celeste",
+    "distrito": "San Juan",
+    "bloque": "JUSTICIALISTA",
+    "partido": "ALIANZA UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/562.gif",
+    "personal": {
+     "total": 16,
+     "categorias": {
+      "1": 4,
+      "2": 3,
+      "3": 3,
+      "4": 2,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "14": 1
+     }
+    }
+   },
+   {
+    "id": "578",
+    "apellido": "Godoy",
+    "nombre": "Juan Cruz",
+    "distrito": "Chaco",
+    "bloque": "LA LIBERTAD AVANZA",
+    "partido": "ALIANZA LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/578.gif",
+    "personal": {
+     "total": 10,
+     "categorias": {
+      "1": 2,
+      "2": 1,
+      "3": 3,
+      "4": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+     }
+    }
+   },
+   {
+    "id": "560",
+    "apellido": "Goerling Lara",
+    "nombre": "Enrique Martín",
+    "distrito": "Misiones",
+    "bloque": "FRENTE PRO",
+    "partido": "JUNTOS POR EL CAMBIO",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/560.gif",
+    "personal": {
+     "total": 6,
+     "categorias": {
+      "3": 2,
+      "4": 3,
+      "5": 1
+     }
+    }
+   },
+   {
+    "id": "477",
+    "apellido": "González",
+    "nombre": "María Teresa Margarita",
+    "distrito": "Formosa",
+    "bloque": "JUSTICIALISTA",
+    "partido": "ALIANZA UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/477.gif",
+    "personal": {
+     "total": 21,
+     "categorias": {
+      "3": 2,
+      "5": 3,
+      "6": 3,
+      "7": 2,
+      "8": 1,
+      "9": 1,
+      "10": 3,
+      "11": 3,
+      "14": 3
+     }
+    }
+   },
+   {
+    "id": "592",
+    "apellido": "Guzmán Coraita",
+    "nombre": "Gonzalo",
+    "distrito": "Salta",
+    "bloque": "LA LIBERTAD AVANZA",
+    "partido": "ALIANZA LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/592.gif",
+    "personal": {
+     "total": 7,
+     "categorias": {
+      "1": 3,
+      "5": 3,
+      "7": 1
+     }
+    }
+   },
+   {
+    "id": "531",
+    "apellido": "Huala",
+    "nombre": "María Victoria",
+    "distrito": "La Pampa",
+    "bloque": "FRENTE PRO",
+    "partido": "JUNTOS POR EL CAMBIO",
+    "inicioMandato": "2021-12-10",
+    "inicio": "2021-12-10",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/531.gif",
+    "personal": {
+     "total": 7,
+     "categorias": {
+      "1": 3,
+      "3": 2,
+      "4": 1,
+      "6": 1
+     }
+    }
+   },
+   {
+    "id": "400",
+    "apellido": "Juez",
+    "nombre": "Luis Alfredo",
+    "distrito": "Córdoba",
+    "bloque": "LA LIBERTAD AVANZA",
+    "partido": "JUNTOS POR EL CAMBIO",
+    "inicioMandato": "2021-12-10",
+    "inicio": "2021-12-10",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/400.gif",
+    "personal": {
+     "total": 9,
+     "categorias": {
+      "1": 6,
+      "2": 1,
+      "14": 2
+     }
+    }
+   },
+   {
+    "id": "534",
+    "apellido": "Juri",
+    "nombre": "Mariana",
+    "distrito": "Mendoza",
+    "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+    "partido": "FRENTE CAMBIA MENDOZA",
+    "inicioMandato": "2021-12-10",
+    "inicio": "2021-12-10",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/534.gif",
+    "personal": {
+     "total": 12,
+     "categorias": {
+      "1": 3,
+      "2": 4,
+      "3": 2,
+      "4": 1,
+      "5": 1,
+      "8": 1
+     }
+    }
+   },
+   {
+    "id": "366",
+    "apellido": "Kirchner",
+    "nombre": "Alicia Margarita Antonia",
+    "distrito": "Santa Cruz",
+    "bloque": "JUSTICIALISTA",
+    "partido": "ALIANZA UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/366.gif",
+    "personal": {
+     "total": 18,
+     "categorias": {
+      "1": 7,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "9": 2
+     }
+    }
+   },
+   {
+    "id": "530",
+    "apellido": "Kroneberger",
+    "nombre": "Daniel Ricardo",
+    "distrito": "La Pampa",
+    "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+    "partido": "JUNTOS POR EL CAMBIO",
+    "inicioMandato": "2021-12-10",
+    "inicio": "2021-12-10",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/530.gif",
+    "personal": {
+     "total": 20,
+     "categorias": {
+      "1": 5,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 2,
+      "13": 2,
+      "14": 2
+     }
+    }
+   },
+   {
+    "id": "538",
+    "apellido": "Lewandowski",
+    "nombre": "Marcelo Néstor",
+    "distrito": "Santa Fe",
+    "bloque": "JUSTICIALISTA",
+    "partido": "FRENTE DE TODOS",
+    "inicioMandato": "2021-12-10",
+    "inicio": "2021-12-10",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/538.gif",
+    "personal": {
+     "total": 17,
+     "categorias": {
+      "1": 2,
+      "2": 5,
+      "3": 6,
+      "6": 2,
+      "8": 1,
+      "11": 1
+     }
+    }
+   },
+   {
+    "id": "529",
+    "apellido": "Linares",
+    "nombre": "Carlos Alberto",
+    "distrito": "Chubut",
+    "bloque": "JUSTICIALISTA",
+    "partido": "FRENTE DE TODOS",
+    "inicioMandato": "2021-12-10",
+    "inicio": "2021-12-10",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/529.gif",
+    "personal": {
+     "total": 11,
+     "categorias": {
+      "1": 2,
+      "3": 2,
+      "4": 4,
+      "5": 1,
+      "6": 1,
+      "8": 1
+     }
+    }
+   },
+   {
+    "id": "574",
+    "apellido": "López",
+    "nombre": "Cándida Cristina",
+    "distrito": "Tierra del Fuego",
+    "bloque": "JUSTICIALISTA",
+    "partido": "ALIANZA FRENTE DE TODOS",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/574.gif",
+    "personal": {
+     "total": 13,
+     "categorias": {
+      "1": 11,
+      "2": 1,
+      "4": 1
+     }
+    }
+   },
+   {
+    "id": "597",
+    "apellido": "López",
+    "nombre": "Claudia Cecilia",
+    "distrito": "La Rioja",
+    "bloque": "LA LIBERTAD AVANZA",
+    "partido": "ALIANZA LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2026-10-29",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/597.gif",
+    "personal": {
+     "total": 0,
+     "categorias": {}
+    }
+   },
+   {
+    "id": "555",
+    "apellido": "López",
+    "nombre": "María Florencia",
+    "distrito": "La Rioja",
+    "bloque": "JUSTICIALISTA",
+    "partido": "ALIANZA UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/555.gif",
+    "personal": {
+     "total": 14,
+     "categorias": {
+      "1": 3,
+      "2": 1,
+      "3": 2,
+      "4": 2,
+      "5": 1,
+      "9": 1,
+      "10": 1,
+      "13": 1,
+      "14": 2
+     }
+    }
+   },
+   {
+    "id": "536",
+    "apellido": "Losada",
+    "nombre": "Carolina",
+    "distrito": "Santa Fe",
+    "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+    "partido": "JUNTOS POR EL CAMBIO",
+    "inicioMandato": "2021-12-10",
+    "inicio": "2021-12-10",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/536.gif",
+    "personal": {
+     "total": 3,
+     "categorias": {
+      "1": 2,
+      "3": 1
+     }
+    }
+   },
+   {
+    "id": "576",
+    "apellido": "Manzur",
+    "nombre": "Juan Luis",
+    "distrito": "Tucumán",
+    "bloque": "JUSTICIALISTA",
+    "partido": "ALIANZA FRENTE DE TODOS",
+    "inicioMandato": "2021-12-09",
+    "inicio": "2023-12-09",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/576.gif",
+    "personal": {
+     "total": 9,
+     "categorias": {
+      "1": 6,
+      "2": 2,
+      "4": 1
+     }
+    }
+   },
+   {
+    "id": "589",
+    "apellido": "Marks",
+    "nombre": "Ana Inés",
+    "distrito": "Río Negro",
+    "bloque": "JUSTICIALISTA",
+    "partido": "FUERZA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/589.gif",
+    "personal": {
+     "total": 16,
+     "categorias": {
+      "1": 8,
+      "3": 3,
+      "4": 1,
+      "5": 1,
+      "6": 3
+     }
+    }
+   },
+   {
+    "id": "585",
+    "apellido": "Márquez",
+    "nombre": "Nadia Judith",
+    "distrito": "Neuquén",
+    "bloque": "LA LIBERTAD AVANZA",
+    "partido": "ALIANZA LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/585.gif",
+    "personal": {
+     "total": 10,
+     "categorias": {
+      "1": 4,
+      "2": 2,
+      "3": 2,
+      "4": 2
+     }
+    }
+   },
+   {
+    "id": "294",
+    "apellido": "Mayans",
+    "nombre": "José Miguel Ángel",
+    "distrito": "Formosa",
+    "bloque": "JUSTICIALISTA",
+    "partido": "ALIANZA UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/294.gif",
+    "personal": {
+     "total": 28,
+     "categorias": {
+      "1": 3,
+      "2": 1,
+      "3": 4,
+      "4": 2,
+      "5": 1,
+      "6": 5,
+      "7": 5,
+      "8": 3,
+      "10": 3,
+      "11": 1
+     }
+    }
+   },
+   {
+    "id": "540",
+    "apellido": "Mendoza",
+    "nombre": "Sandra Mariela",
+    "distrito": "Tucumán",
+    "bloque": "CONVICCIÓN FEDERAL",
+    "partido": "FRENTE DE TODOS",
+    "inicioMandato": "2021-12-10",
+    "inicio": "2021-12-10",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/540.gif",
+    "personal": {
+     "total": 23,
+     "categorias": {
+      "1": 6,
+      "2": 2,
+      "3": 1,
+      "4": 4,
+      "5": 2,
+      "6": 2,
+      "7": 4,
+      "8": 1,
+      "9": 1
+     }
+    }
+   },
+   {
+    "id": "554",
+    "apellido": "Moises",
+    "nombre": "María Carolina",
+    "distrito": "Jujuy",
+    "bloque": "CONVICCIÓN FEDERAL",
+    "partido": "ALIANZA UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/554.gif",
+    "personal": {
+     "total": 27,
+     "categorias": {
+      "1": 2,
+      "2": 1,
+      "3": 5,
+      "5": 3,
+      "6": 5,
+      "10": 4,
+      "12": 1,
+      "13": 2,
+      "14": 4
+     }
+    }
+   },
+   {
+    "id": "596",
+    "apellido": "Monte de Oca",
+    "nombre": "María Belén",
+    "distrito": "Tierra del Fuego",
+    "bloque": "LA LIBERTAD AVANZA",
+    "partido": "ALIANZA LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/596.gif",
+    "personal": {
+     "total": 10,
+     "categorias": {
+      "1": 6,
+      "2": 1,
+      "3": 1,
+      "5": 1,
+      "8": 1
+     }
+    }
+   },
+   {
+    "id": "581",
+    "apellido": "Monteverde",
+    "nombre": "Agustín Aníbal",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "LA LIBERTAD AVANZA",
+    "partido": "ALIANZA LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/581.gif",
+    "personal": {
+     "total": 2,
+     "categorias": {
+      "2": 1,
+      "3": 1
+     }
+    }
+   },
+   {
+    "id": "594",
+    "apellido": "Moreno",
+    "nombre": "Elia Esther del Carmen",
+    "distrito": "Santiago del Estero",
+    "bloque": "FRENTE CÍVICO POR SANTIAGO",
+    "partido": "FRENTE CÍVICO POR SANTIAGO",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/594.gif",
+    "personal": {
+     "total": 4,
+     "categorias": {
+      "1": 1,
+      "3": 1,
+      "6": 2
+     }
+    }
+   },
+   {
+    "id": "510",
+    "apellido": "Neder",
+    "nombre": "José Emilio",
+    "distrito": "Santiago del Estero",
+    "bloque": "JUSTICIALISTA",
+    "partido": "FRENTE FUERZA PATRIA PERONISTA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/510.gif",
+    "personal": {
+     "total": 13,
+     "categorias": {
+      "1": 4,
+      "2": 1,
+      "4": 3,
+      "5": 3,
+      "6": 2
+     }
+    }
+   },
+   {
+    "id": "563",
+    "apellido": "Olivera Lucero",
+    "nombre": "Bruno Antonio",
+    "distrito": "San Juan",
+    "bloque": "LA LIBERTAD AVANZA",
+    "partido": "ALIANZA LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/563.gif",
+    "personal": {
+     "total": 16,
+     "categorias": {
+      "1": 5,
+      "2": 1,
+      "5": 1,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1,
+      "11": 1,
+      "13": 3,
+      "14": 1
+     }
+    }
+   },
+   {
+    "id": "591",
+    "apellido": "Orozco",
+    "nombre": "María Emilia",
+    "distrito": "Salta",
+    "bloque": "LA LIBERTAD AVANZA",
+    "partido": "ALIANZA LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/591.gif",
+    "personal": {
+     "total": 3,
+     "categorias": {
+      "1": 1,
+      "2": 1,
+      "3": 1
+     }
+    }
+   },
+   {
+    "id": "551",
+    "apellido": "Paoltroni",
+    "nombre": "Francisco Manuel",
+    "distrito": "Formosa",
+    "bloque": "LA LIBERTAD AVANZA",
+    "partido": "ALIANZA LA LIBERTAD AVANZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/551.gif",
+    "personal": {
+     "total": 10,
+     "categorias": {
+      "1": 3,
+      "2": 3,
+      "3": 1,
+      "4": 1,
+      "13": 1,
+      "14": 1
+     }
+    }
+   },
+   {
+    "id": "498",
+    "apellido": "Recalde",
+    "nombre": "Mariano",
+    "distrito": "Ciudad de Buenos Aires",
+    "bloque": "JUSTICIALISTA",
+    "partido": "FUERZA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/498.gif",
+    "personal": {
+     "total": 18,
+     "categorias": {
+      "1": 3,
+      "2": 4,
+      "3": 2,
+      "4": 1,
+      "5": 1,
+      "7": 1,
+      "8": 4,
+      "9": 1,
+      "14": 1
+     }
+    }
+   },
+   {
+    "id": "556",
+    "apellido": "Rejal",
+    "nombre": "Jesús Fernando",
+    "distrito": "La Rioja",
+    "bloque": "JUSTICIALISTA",
+    "partido": "ALIANZA UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/556.gif",
+    "personal": {
+     "total": 19,
+     "categorias": {
+      "1": 6,
+      "2": 5,
+      "3": 1,
+      "4": 4,
+      "7": 2,
+      "9": 1
+     }
+    }
+   },
+   {
+    "id": "559",
+    "apellido": "Rojas Decut",
+    "nombre": "Sonia Elizabeth",
+    "distrito": "Misiones",
+    "bloque": "MOVIMIENTO POR MISIONES",
+    "partido": "FRENTE RENOVADOR DE LA CONCORDIA-INNOVACIÓN FEDERAL",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/559.gif",
+    "personal": {
+     "total": 7,
+     "categorias": {
+      "1": 2,
+      "2": 4,
+      "5": 1
+     }
+    }
+   },
+   {
+    "id": "593",
+    "apellido": "Royon",
+    "nombre": "Flavia Gabriela",
+    "distrito": "Salta",
+    "bloque": "PRIMERO LOS SALTEÑOS",
+    "partido": "PRIMERO LOS SALTEÑOS",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/593.gif",
+    "personal": {
+     "total": 10,
+     "categorias": {
+      "1": 6,
+      "2": 1,
+      "5": 1,
+      "6": 1,
+      "12": 1
+     }
+    }
+   },
+   {
+    "id": "566",
+    "apellido": "Salino",
+    "nombre": "Fernando Aldo",
+    "distrito": "San Luis",
+    "bloque": "JUSTICIA SOCIAL FEDERAL",
+    "partido": "ALIANZA UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/566.gif",
+    "personal": {
+     "total": 17,
+     "categorias": {
+      "1": 1,
+      "2": 3,
+      "3": 1,
+      "4": 4,
+      "5": 3,
+      "6": 2,
+      "7": 2,
+      "9": 1
+     }
+    }
+   },
+   {
+    "id": "579",
+    "apellido": "Schneider",
+    "nombre": "Silvana Lorena",
+    "distrito": "Chaco",
+    "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+    "partido": "ALIANZA LA LIBERTAD AVANZA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/579.gif",
+    "personal": {
+     "total": 10,
+     "categorias": {
+      "1": 3,
+      "2": 3,
+      "3": 1,
+      "4": 2,
+      "7": 1
+     }
+    }
+   },
+   {
+    "id": "588",
+    "apellido": "Soria",
+    "nombre": "Martin Ignacio",
+    "distrito": "Río Negro",
+    "bloque": "JUSTICIALISTA",
+    "partido": "FUERZA PATRIA",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/588.gif",
+    "personal": {
+     "total": 10,
+     "categorias": {
+      "1": 4,
+      "2": 1,
+      "4": 3,
+      "5": 1,
+      "7": 1
+     }
+    }
+   },
+   {
+    "id": "571",
+    "apellido": "Suárez",
+    "nombre": "Rodolfo Alejandro",
+    "distrito": "Mendoza",
+    "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+    "partido": "FRENTE CAMBIA MENDOZA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/571.gif",
+    "personal": {
+     "total": 6,
+     "categorias": {
+      "1": 5,
+      "3": 1
+     }
+    }
+   },
+   {
+    "id": "528",
+    "apellido": "Terenzi",
+    "nombre": "Edith Elizabeth",
+    "distrito": "Chubut",
+    "bloque": "DESPIERTA CHUBUT",
+    "partido": "JUNTOS POR EL CAMBIO CHUBUT",
+    "inicioMandato": "2021-12-10",
+    "inicio": "2021-12-10",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/528.gif",
+    "personal": {
+     "total": 15,
+     "categorias": {
+      "1": 3,
+      "2": 7,
+      "3": 2,
+      "5": 1,
+      "7": 1,
+      "10": 1
+     }
+    }
+   },
+   {
+    "id": "561",
+    "apellido": "Uñac",
+    "nombre": "Sergio Mauricio",
+    "distrito": "San Juan",
+    "bloque": "JUSTICIALISTA",
+    "partido": "ALIANZA UNIÓN POR LA PATRIA",
+    "inicioMandato": "2023-12-10",
+    "inicio": "2023-12-10",
+    "fin": "2029-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/561.gif",
+    "personal": {
+     "total": 20,
+     "categorias": {
+      "1": 5,
+      "2": 4,
+      "3": 2,
+      "5": 2,
+      "6": 2,
+      "7": 5
+     }
+    }
+   },
+   {
+    "id": "525",
+    "apellido": "Valenzuela",
+    "nombre": "Mercedes Gabriela",
+    "distrito": "Corrientes",
+    "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+    "partido": "ECO + VAMOS CORRIENTES",
+    "inicioMandato": "2021-12-10",
+    "inicio": "2021-12-10",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/525.gif",
+    "personal": {
+     "total": 19,
+     "categorias": {
+      "1": 3,
+      "2": 2,
+      "3": 5,
+      "4": 4,
+      "5": 1,
+      "6": 3,
+      "9": 1
+     }
+    }
+   },
+   {
+    "id": "523",
+    "apellido": "Vigo",
+    "nombre": "Alejandra María",
+    "distrito": "Córdoba",
+    "bloque": "PROVINCIAS UNIDAS",
+    "partido": "HACEMOS POR CÓRDOBA",
+    "inicioMandato": "2021-12-10",
+    "inicio": "2021-12-10",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/523.gif",
+    "personal": {
+     "total": 6,
+     "categorias": {
+      "1": 4,
+      "3": 1,
+      "4": 1
+     }
+    }
+   },
+   {
+    "id": "524",
+    "apellido": "Vischi",
+    "nombre": "Eduardo Alejandro",
+    "distrito": "Corrientes",
+    "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+    "partido": "ECO + VAMOS CORRIENTES",
+    "inicioMandato": "2021-12-10",
+    "inicio": "2021-12-10",
+    "fin": "2027-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/524.gif",
+    "personal": {
+     "total": 8,
+     "categorias": {
+      "1": 2,
+      "2": 1,
+      "3": 2,
+      "8": 2,
+      "9": 1
+     }
+    }
+   },
+   {
+    "id": "450",
+    "apellido": "Zamora",
+    "nombre": "Gerardo",
+    "distrito": "Santiago del Estero",
+    "bloque": "FRENTE CÍVICO POR SANTIAGO",
+    "partido": "FRENTE CÍVICO POR SANTIAGO",
+    "inicioMandato": "2025-12-10",
+    "inicio": "2025-12-10",
+    "fin": "2031-12-09",
+    "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/450.gif",
+    "personal": {
+     "total": 3,
+     "categorias": {
+      "2": 2,
+      "6": 1
+     }
+    }
+   }
+  ],
+  "actualizado": "2026-11-04T15:19:46.299Z",
+  "url": "https://www.senado.gob.ar/micrositios/DatosAbiertos/ExportarListadoSenadores/json"
+ },
+ "avisos": []
+}

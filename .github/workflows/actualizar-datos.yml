@@ -1,0 +1,31 @@
+name: Actualizar datos oficiales
+
+on:
+  schedule:
+    - cron: "0 9 * * 1" # lunes 6:00 hora argentina
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/update-data.mjs
+      - name: Commit si cambiaron los datos
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/legisladores.json
+          # Ignora el cambio de la marca "generado" si no cambió nada más
+          if git diff --cached --numstat | awk '{s+=$1} END {exit !(s>2)}'; then
+            git commit -m "Actualizar datos oficiales"
+            git push
+          else
+            echo "Sin cambios relevantes"
+          fi
