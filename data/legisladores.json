@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-04T16:15:12.220Z",
+ "generado": "2026-11-09T09:56:09.075Z",
  "parametros": {
   "valorModulo": 2784.456902,
   "valorModuloVigencia": "2026-03",
@@ -7380,12 +7380,12 @@
     "fin": "2029-12-09",
     "foto": "https://www.senado.gob.ar/bundles/senadosenadores/images/fsena/554.gif",
     "personal": {
-     "total": 27,
+     "total": 26,
      "categorias": {
       "1": 2,
       "2": 1,
       "3": 5,
-      "5": 3,
+      "5": 2,
       "6": 5,
       "10": 4,
       "12": 1,
@@ -8165,17 +8165,17 @@
     }
    }
   ],
-  "actualizado": "2026-11-04T16:15:12.220Z",
+  "actualizado": "2026-11-09T09:56:09.075Z",
   "url": "https://www.senado.gob.ar/micrositios/DatosAbiertos/ExportarListadoSenadores/json"
  },
  "presupuesto": {
   "ejercicio": 2026,
-  "actualizado": "2026-11-02",
+  "actualizado": "2026-11-06",
   "url": "https://dgsiaf-repo.mecon.gob.ar/repository/pa/datasets/2026/credito-anual-2026.zip",
   "unidad": "millones de pesos",
   "totalNacional": {
    "vigente": 152474968.84,
-   "devengado": 128458366.45
+   "devengado": 129001604.71
   },
   "organismos": [
    {
@@ -8183,42 +8183,42 @@
     "nombre": "Honorable Cámara de Diputados de la Nación Argentina",
     "presupuestado": 219790.61,
     "vigente": 277814.99,
-    "devengado": 216485.91
+    "devengado": 216992.51
    },
    {
     "id": "312",
     "nombre": "Honorable Senado de la Nación Argentina",
     "presupuestado": 185313,
     "vigente": 267406.01,
-    "devengado": 204708.91
+    "devengado": 205131.71
    },
    {
     "id": "316",
     "nombre": "Dirección de Ayuda Social para el Personal del Congreso de la Nación (DAS)",
     "presupuestado": 63620,
     "vigente": 130032.25,
-    "devengado": 108557.46
+    "devengado": 114087.07
    },
    {
     "id": "1",
     "nombre": "Auditoría General de la Nación",
     "presupuestado": 84515.14,
     "vigente": 101748.1,
-    "devengado": 82310.18
+    "devengado": 82305.76
    },
    {
     "id": "314",
     "nombre": "Biblioteca del Congreso de la Nación",
     "presupuestado": 52295,
     "vigente": 64791,
-    "devengado": 50341.21
+    "devengado": 50413.27
    },
    {
     "id": "340",
     "nombre": "Procuración Penitenciaria de la Nación",
     "presupuestado": 19263,
     "vigente": 20549.43,
-    "devengado": 14948.5
+    "devengado": 15047.27
    },
    {
     "id": "315",
@@ -8232,28 +8232,28 @@
     "nombre": "Defensoría del Pueblo de la Nación",
     "presupuestado": 14916.9,
     "vigente": 16866.9,
-    "devengado": 12643.63
+    "devengado": 12681.93
    },
    {
     "id": "385",
     "nombre": "Defensoría de los Derechos de las Niñas, Niños y Adolescentes",
     "presupuestado": 9194,
     "vigente": 11347.28,
-    "devengado": 8460.6
+    "devengado": 8462.64
    },
    {
     "id": "387",
     "nombre": "Comité Nacional para la Prevención de la Tortura (CNPT)",
     "presupuestado": 5465,
     "vigente": 8337.86,
-    "devengado": 6417.04
+    "devengado": 6459.83
    },
    {
     "id": "346",
     "nombre": "Defensoría del Público de Servicios de Comunicación Audiovisual",
     "presupuestado": 4230.32,
     "vigente": 4020.4,
-    "devengado": 1809.37
+    "devengado": 1877.68
    },
    {
     "id": "369",
@@ -8267,29 +8267,34 @@
    {
     "nombre": "Gastos en personal",
     "vigente": 769084.81,
-    "devengado": 595605.91
+    "devengado": 595664.21
    },
    {
     "nombre": "Servicios no personales",
-    "vigente": 121569.62,
-    "devengado": 103405.95
+    "vigente": 121559.62,
+    "devengado": 109763.36
    },
    {
     "nombre": "Bienes de consumo",
-    "vigente": 25534.63,
-    "devengado": 19249.64
+    "vigente": 25524.63,
+    "devengado": 19532.41
    },
    {
     "nombre": "Bienes de uso",
-    "vigente": 6067.72,
-    "devengado": 2625.93
+    "vigente": 6087.72,
+    "devengado": 2698
    },
    {
     "nombre": "Transferencias",
     "vigente": 1140.96,
-    "devengado": 993.54
+    "devengado": 999.86
    }
   ]
  },
- "avisos": []
+ "avisos": [
+  "Personal de Diputados: se usó la copia local (fetch failed)",
+  "Escala salarial: se usó la copia local (fetch failed)",
+  "Dieta de diputados: se usó la copia local (fetch failed)",
+  "Diputados: se usó la copia local (fetch failed)"
+ ]
 }
