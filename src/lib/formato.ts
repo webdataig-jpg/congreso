@@ -34,3 +34,23 @@ export const millones = (n: number) => `$ ${int(n)} M`;
 export function pct(x: number, decimales = 1) {
   return `${new Intl.NumberFormat("es-AR", { minimumFractionDigits: decimales, maximumFractionDigits: decimales }).format(x * 100)}%`;
 }
+
+const SIGLAS = new Set(["UCR", "PRO", "MID", "PTS"]);
+const MENORES = new Set(["de", "del", "la", "las", "el", "los", "y", "e", "por", "en", "a"]);
+const TILDES: Record<string, string> = { coalicion: "Coalición", civica: "Cívica", produccion: "Producción" };
+
+/** Nombre de bloque legible: "UCR - UNIÓN CÍVICA RADICAL" → "UCR - Unión Cívica Radical". */
+export function bloqueLegible(b: string): string {
+  return b
+    .trim()
+    .split(/(\s+|-)/)
+    .map((w, i) => {
+      if (!/\p{L}/u.test(w)) return w;
+      if (SIGLAS.has(w)) return w;
+      const min = w.toLocaleLowerCase("es");
+      if (TILDES[min]) return TILDES[min];
+      if (i > 0 && MENORES.has(min)) return min;
+      return min.charAt(0).toLocaleUpperCase("es") + min.slice(1);
+    })
+    .join("");
+}

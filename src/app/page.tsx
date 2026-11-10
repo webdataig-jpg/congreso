@@ -1,7 +1,8 @@
 import datosJson from "../../data/legisladores.json";
 import type { Datos } from "@/lib/tipos";
 import { construirFilas, costoLegisladores, recambios, resumenCongreso } from "@/lib/resumen";
-import { $, $corto, fecha, int, millones, pct } from "@/lib/formato";
+import Link from "next/link";
+import { $, $corto, bloqueLegible, fecha, int, millones, pct } from "@/lib/formato";
 import { Avatar, Canvas, Muestra, Tarjeta, Titulo, VerTodo } from "@/components/ui";
 import { GastoEnVivo } from "@/components/Vivo";
 import { DiasHasta, MejorCalificados, type Mini } from "@/components/Ranking";
@@ -208,18 +209,24 @@ export default function Congreso() {
         <Tarjeta className="lg:col-span-4" titulo="Los senadores que más cuestan" meta="por mes" pie={<VerTodo href="/senadores">Ver los {datos.senadores.lista.length} senadores</VerTodo>}>
           <ol>
             {caros.map((f, i) => (
-              <li key={f.id} className="flex h-12 items-center gap-3 border-t border-rule first:border-t-0">
-                <span className="num w-4 text-[12px] text-muted">{i + 1}.</span>
-                <Avatar foto={f.foto} nombre={f.nombre} apellido={f.apellido} />
-                <span className="min-w-0 flex-1">
-                  <span className="block truncate">
-                    {f.apellido}, {f.nombre}
+              <li key={f.id} className="border-t border-rule first:border-t-0">
+                <Link
+                  href={`/senadores#legislador-${f.id}`}
+                  className="group -mx-2 flex items-center gap-3 rounded-md px-2 py-2.5 transition-colors hover:bg-raised/60"
+                >
+                  <span className="num w-4 text-[12px] text-muted">{i + 1}.</span>
+                  <Avatar foto={f.foto} nombre={f.nombre} apellido={f.apellido} size={36} />
+                  <span className="min-w-0 flex-1">
+                    <span className="block truncate font-medium group-hover:underline">
+                      {f.apellido}, {f.nombre}
+                    </span>
+                    <span className="mt-0.5 block text-[13px] leading-[18px] text-ink">{bloqueLegible(f.bloque)}</span>
+                    <span className="block truncate text-[12px] text-muted">
+                      {f.distrito} · {int(f.asesores)} asesores
+                    </span>
                   </span>
-                  <span className="block truncate text-[12px] text-muted">
-                    {f.distrito} · {int(f.asesores)} asesores
-                  </span>
-                </span>
-                <span className="num font-bold">{$corto(f.dietaMensual + f.asesoresMensual)}</span>
+                  <span className="num font-bold">{$corto(f.dietaMensual + f.asesoresMensual)}</span>
+                </Link>
               </li>
             ))}
           </ol>

@@ -3,7 +3,7 @@
 import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import type { Ajustes, Camara, Datos, Fila } from "@/lib/tipos";
 import { construirFilas, fechaMs, finMs, mensual, mesesEntre, progreso, restante, sueldoCategoria } from "@/lib/calculo";
-import { $, $corto, dec, fecha, int, plural } from "@/lib/formato";
+import { $, $corto, bloqueLegible, dec, fecha, int, plural } from "@/lib/formato";
 import { Calificador, DatosContacto, EstrellasResumen, promedio, useCalificaciones, type EstadoCalificaciones } from "./Calificar";
 import { Avatar, Canvas, Muestra, Titulo } from "./ui";
 
@@ -56,6 +56,24 @@ export default function Lista({ datos, camara }: { datos: Datos; camara: Camara 
   const [orden, setOrden] = useState<Orden>("vence");
   const [abierto, setAbierto] = useState<string | null>(null);
   const qDif = useDeferredValue(q);
+
+  // Enlace directo a una ficha: /senadores#legislador-<id> la abre y la lleva a la vista
+  useEffect(() => {
+    const abrirDesdeHash = () => {
+      const id = decodeURIComponent(location.hash.replace(/^#legislador-/, ""));
+      if (!id || id === location.hash || !todas.some((f) => f.id === id)) return;
+      setQ("");
+      setDistrito("");
+      setBloque("");
+      setAbierto(id);
+      requestAnimationFrame(() =>
+        requestAnimationFrame(() => document.getElementById(`legislador-${id}`)?.scrollIntoView({ block: "start" })),
+      );
+    };
+    abrirDesdeHash();
+    window.addEventListener("hashchange", abrirDesdeHash);
+    return () => window.removeEventListener("hashchange", abrirDesdeHash);
+  }, [todas]);
 
   const distritos = useMemo(() => [...new Set(todas.map((f) => f.distrito))].sort((a, b) => a.localeCompare(b, "es")), [todas]);
   const bloques = useMemo(() => [...new Set(todas.map((f) => f.bloque))].sort((a, b) => a.localeCompare(b, "es")), [todas]);
@@ -297,7 +315,7 @@ function FilaLegislador({
   );
 
   return (
-    <li className="border-t border-rule first:border-t-0">
+    <li id={`legislador-${f.id}`} className="scroll-mt-16 lg:scroll-mt-6 border-t border-rule first:border-t-0">
       <button
         type="button"
         onClick={alternar}
@@ -313,10 +331,9 @@ function FilaLegislador({
             <span className="block truncate font-medium">
               {f.apellido}, {f.nombre}
             </span>
+            <span className="mt-0.5 block text-[13px] leading-[18px] text-ink">{bloqueLegible(f.bloque)}</span>
             <span className="flex min-w-0 items-center gap-2 text-[12px] text-muted">
-              <span className="truncate">
-                {f.distrito} · {f.bloque}
-              </span>
+              <span className="truncate">{f.distrito}</span>
               <EstrellasResumen c={calif.resumen[`${f.camara}:${f.id}`]} />
             </span>
           </span>
