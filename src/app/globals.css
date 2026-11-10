@@ -1,54 +1,66 @@
 @import "tailwindcss";
 
 /*
-  Estilo: achromatic ledger. La interfaz va en tinta; el único color (--hue) marca el dato principal
-  de cada bloque. Fondo gris azulado de libro contable. Sin sombras en reposo, sin degradés.
+  Estilo: papel y azul marino. Barra lateral marino, fondo de papel cálido, tinta azul oscura;
+  el celeste (--hue) marca el dato principal de cada bloque. Sin sombras en reposo, sin degradés.
 */
 :root {
-  --ground: #f2f4f7;
-  --surface: #ffffff;
-  --raised: #eef0f3;
-  --active: #e4e7ec;
-  --border: #e3e6ea;
-  --rule: #eef0f3;
-  --control: #cfd4da;
-  --ink: #0a0a0a;
-  --muted: #5d636b;
-  --faint: #6b7078;
-  --primary: #141414;
+  --ground: #f4f1ea;
+  --surface: #fffdf9;
+  --raised: #f1ede5;
+  --active: #e8e2d6;
+  --border: #e5dfd3;
+  --rule: #eee9e0;
+  --control: #cdc5b6;
+  --ink: #172033;
+  --muted: #5a6273;
+  --faint: #677083;
+  --primary: #1b2b44;
   --on-primary: #ffffff;
-  --hue: #1d5fbf;
-  --hue-soft: #cfdcf0;
-  --positive: #247b50;
-  --negative: #c4242a;
-  --notice-bg: #fffbeb;
-  --notice-border: #fde68a;
-  --notice-ink: #92400e;
-  --star: #b45309;
+  --hue: #2470b8;
+  --hue-soft: #d3e3f3;
+  --positive: #2e7d52;
+  --negative: #c23b2e;
+  --notice-bg: #fdf6e3;
+  --notice-border: #ecd9a4;
+  --notice-ink: #7c4a0b;
+  --star: #c47f12;
+  --side: #1b2b44;
+  --side-ink: #ffffff;
+  --side-muted: #b3bfd0;
+  --side-hover: #24375a;
+  --side-active: #2f4670;
+  --side-accent: #7db8ee;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --ground: #000000;
-    --surface: #111111;
-    --raised: #1b1b1b;
-    --active: #232323;
-    --border: #262626;
-    --rule: #1c1c1c;
-    --control: #444444;
-    --ink: #ffffff;
-    --muted: #b4b4b4;
-    --faint: #949494;
-    --primary: #ffffff;
-    --on-primary: #000000;
-    --hue: #6ea2f0;
-    --hue-soft: #1f2d44;
-    --positive: #3fc07a;
-    --negative: #e5566f;
-    --notice-bg: #1f1a0e;
-    --notice-border: #4a3a12;
+    --ground: #0b1220;
+    --surface: #111a2b;
+    --raised: #18233a;
+    --active: #1f2c46;
+    --border: #22304a;
+    --rule: #1a2540;
+    --control: #3a4a66;
+    --ink: #f1f4f8;
+    --muted: #a9b4c4;
+    --faint: #8d99ab;
+    --primary: #f1f4f8;
+    --on-primary: #0b1220;
+    --hue: #6fb1ee;
+    --hue-soft: #1c3350;
+    --positive: #4cc488;
+    --negative: #f07167;
+    --notice-bg: #221b0c;
+    --notice-border: #4d3b12;
     --notice-ink: #f2c46b;
-    --star: #f0a43a;
+    --star: #f2b13f;
+    --side: #070d18;
+    --side-ink: #f1f4f8;
+    --side-muted: #94a1b5;
+    --side-hover: #121c2f;
+    --side-active: #1b2a45;
+    --side-accent: #6fb1ee;
   }
 }
 
@@ -73,6 +85,12 @@
   --color-notice-border: var(--notice-border);
   --color-notice-ink: var(--notice-ink);
   --color-star: var(--star);
+  --color-side: var(--side);
+  --color-side-ink: var(--side-ink);
+  --color-side-muted: var(--side-muted);
+  --color-side-hover: var(--side-hover);
+  --color-side-active: var(--side-active);
+  --color-side-accent: var(--side-accent);
   --font-sans: var(--font-geist), Inter, system-ui, sans-serif;
 }
 

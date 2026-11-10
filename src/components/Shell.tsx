@@ -26,7 +26,7 @@ export function Marca({ className = "" }: { className?: string }) {
           return <circle key={`${r}-${i}`} cx={12 + r * Math.cos(a)} cy={12.5 - r * Math.sin(a)} r={1.25} fill="currentColor" />;
         }),
       )}
-      <rect x="10.4" y="11.2" width="3.2" height="2.6" rx="0.6" fill="var(--hue)" />
+      <rect x="10.4" y="11.2" width="3.2" height="2.6" rx="0.6" fill="var(--side-accent)" />
     </svg>
   );
 }
@@ -52,7 +52,7 @@ export default function Shell({ children, actualizado }: { children: React.React
           onClick={() => setMenu(false)}
           aria-current={activo(href) ? "page" : undefined}
           className={`flex h-11 items-center gap-2.5 rounded-lg px-3 text-[14px] transition-colors lg:h-8 ${
-            activo(href) ? "bg-active text-ink" : "text-muted hover:bg-raised hover:text-ink"
+            activo(href) ? "bg-side-active font-medium text-side-ink" : "text-side-muted hover:bg-side-hover hover:text-side-ink"
           }`}
         >
           <Icono />
@@ -63,7 +63,7 @@ export default function Shell({ children, actualizado }: { children: React.React
   );
 
   const pie = (
-    <p className="px-3 text-[12px] leading-4 text-faint">
+    <p className="px-3 text-[12px] leading-4 text-side-muted">
       Datos oficiales de HCDN, Senado y Ministerio de Economía.
       <br />
       Actualizados el {actualizado}.
@@ -73,12 +73,12 @@ export default function Shell({ children, actualizado }: { children: React.React
   return (
     <div className="lg:grid lg:min-h-dvh lg:grid-cols-[240px_minmax(0,1fr)]">
       {/* Escritorio: barra lateral sobre el fondo */}
-      <aside className="sticky top-0 hidden h-dvh flex-col gap-6 px-3 py-5 lg:flex">
+      <aside className="sticky top-0 hidden h-dvh flex-col gap-6 bg-side px-3 py-5 text-side-ink lg:flex">
         <Link href="/" className="flex items-center gap-2.5 px-3">
-          <Marca className="h-[18px] w-[31px] shrink-0 text-ink" />
+          <Marca className="h-[18px] w-[31px] shrink-0 text-side-ink" />
           <span className="leading-tight">
             <span className="block text-[14px] font-medium">Cuánto nos cuestan</span>
-            <span className="block text-[12px] text-muted">Congreso de la Nación</span>
+            <span className="block text-[12px] text-side-muted">Congreso de la Nación</span>
           </span>
         </Link>
         {navegacion}
@@ -86,9 +86,9 @@ export default function Shell({ children, actualizado }: { children: React.React
       </aside>
 
       {/* Teléfono y tablet: barra superior y menú en hoja completa */}
-      <header className="sticky top-0 z-30 flex h-12 items-center justify-between border-b border-border bg-ground px-4 lg:hidden">
+      <header className="sticky top-0 z-30 flex h-12 items-center justify-between bg-side px-4 text-side-ink lg:hidden">
         <Link href="/" className="flex items-center gap-2">
-          <Marca className="h-[14px] w-[24px] text-ink" />
+          <Marca className="h-[14px] w-[24px] text-side-ink" />
           <span className="text-[14px] font-medium">Cuánto nos cuestan</span>
         </Link>
         <button
@@ -96,7 +96,7 @@ export default function Shell({ children, actualizado }: { children: React.React
           onClick={() => setMenu((m) => !m)}
           aria-expanded={menu}
           aria-controls="menu-movil"
-          className="-mr-2 grid size-11 place-items-center rounded-lg text-ink active:bg-raised"
+          className="-mr-2 grid size-11 place-items-center rounded-lg text-side-ink active:bg-side-hover"
         >
           <span className="sr-only">{menu ? "Cerrar menú" : "Abrir menú"}</span>
           <svg viewBox="0 0 20 20" className="size-5" aria-hidden fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
@@ -105,7 +105,7 @@ export default function Shell({ children, actualizado }: { children: React.React
         </button>
       </header>
       {menu && (
-        <div id="menu-movil" className="fixed inset-x-0 top-12 bottom-0 z-20 flex flex-col gap-6 bg-ground px-3 py-4 lg:hidden">
+        <div id="menu-movil" className="fixed inset-x-0 top-12 bottom-0 z-20 flex flex-col gap-6 bg-side px-3 py-4 text-side-ink lg:hidden">
           {navegacion}
           <div className="mt-auto pb-4">{pie}</div>
         </div>

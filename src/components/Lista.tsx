@@ -274,6 +274,14 @@ function AjustesMenu({ ajustes, setAjustes }: { ajustes: Ajustes; setAjustes: (a
   );
 }
 
+/** Lo que queda de mandato, contado en días. */
+function diasRestantes(fin: string, ahora: number) {
+  const r = restante(fin, ahora);
+  if (r.totalDias === 0) return "Mandato cumplido";
+  return `${int(r.totalDias)} ${r.totalDias === 1 ? "día" : "días"}`;
+}
+
+/** Lo mismo en años, meses y días, como referencia. */
 function textoRestante(fin: string, ahora: number) {
   const r = restante(fin, ahora);
   if (r.totalDias === 0) return "Mandato cumplido";
@@ -341,7 +349,9 @@ function FilaLegislador({
 
         <span className="order-3 col-span-2 md:order-none md:col-span-1">
           <span className="flex items-baseline justify-between gap-2 text-[13px]">
-            <span className={r.totalDias <= 400 ? "font-medium" : ""}>{textoRestante(f.fin, ahora)}</span>
+            <span className={`num ${r.totalDias <= 400 ? "font-medium" : ""}`} title={textoRestante(f.fin, ahora)}>
+              {diasRestantes(f.fin, ahora)}
+            </span>
             <span className="num text-[12px] text-muted">{fecha(f.fin)}</span>
           </span>
           {barra}
@@ -425,6 +435,12 @@ function Ficha({ id, f, ahora, ajustes, datos, calif }: { id: string; f: Fila; a
         <h3 className="mb-1 text-[13px] font-medium">Costo del mandato</h3>
         <p className="text-[12px] text-muted">
           Del {fecha(f.inicio)} al {fecha(f.fin)} · {dec(mesesTotal)} meses
+          {ahora < fin && (
+            <>
+              <br />
+              Le quedan <span className="num font-medium text-ink">{diasRestantes(f.fin, ahora)}</span> ({textoRestante(f.fin, ahora)})
+            </>
+          )}
         </p>
         <div className="mt-3 flex h-2 overflow-hidden rounded-[2px]" role="img" aria-label={`Ya pagado ${Math.round(ya * 100)}% del mandato`}>
           <span className="h-full bg-ink" style={{ width: `${ya * 100}%` }} />
