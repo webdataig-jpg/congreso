@@ -1,6 +1,6 @@
 import datosJson from "../../data/legisladores.json";
 import type { Datos } from "@/lib/tipos";
-import { construirFilas, costoLegisladores, mayorGasto, recambios, resumenCongreso } from "@/lib/resumen";
+import { construirFilas, costoLegisladores, gastoPorBloque, mayorGasto, recambios, resumenCongreso } from "@/lib/resumen";
 import Link from "next/link";
 import { $, $corto, bloqueLegible, fecha, int, millones, pct } from "@/lib/formato";
 import { Avatar, Canvas, Muestra, Tarjeta, Titulo, VerTodo } from "@/components/ui";
@@ -40,7 +40,11 @@ export default function Congreso() {
   return (
     <Canvas>
       <Titulo
-        titulo="Congreso de la Nación"
+        titulo={
+          <>
+            Congreso de la Nación <span className="font-normal text-muted">(así se gastan nuestros impuestos)</span>
+          </>
+        }
         sub={
           <>
             En {r.ejercicio} cuesta {millones(r.vigente)}: {millones(r.porDia)} por día. El {pct(r.sharePersonal, 0)} se va en
@@ -86,12 +90,16 @@ export default function Congreso() {
             </span>
           }
           meta={
-            <span className="flex flex-wrap gap-x-4 gap-y-1">
-              <span>
-                <Muestra className="bg-hue" /> Gastado
+            <span className="flex flex-wrap gap-x-5 gap-y-1 text-[14px] leading-5 text-ink">
+              <span className="flex items-center gap-1.5">
+                <Muestra className="h-3 w-4 bg-hue" />
+                <span className="font-medium">Gastado</span>
+                <span className="num text-muted">{millones(r.devengado)}</span>
               </span>
-              <span>
-                <Muestra className="bg-hue-soft" /> Resto del crédito
+              <span className="flex items-center gap-1.5">
+                <Muestra className="h-3 w-4 bg-hue-soft ring-1 ring-hue/40 ring-inset" />
+                <span className="font-medium">Falta gastar</span>
+                <span className="num text-muted">{millones(r.vigente - r.devengado)}</span>
               </span>
             </span>
           }
@@ -110,11 +118,11 @@ export default function Congreso() {
                   <li
                     key={o.id}
                     className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-4 gap-y-1.5 border-t border-rule py-[11px] sm:grid-cols-[minmax(0,1.5fr)_minmax(0,2fr)_6.5rem_3.5rem]"
-                    title={`${o.nombre}: vigente ${millones(o.vigente)}, gastado ${millones(o.devengado)}`}
+                    title={`${o.nombre}: vigente ${millones(o.vigente)}, gastado ${millones(o.devengado)}, falta gastar ${millones(o.vigente - o.devengado)}`}
                   >
                     <span className="truncate">{o.corto}</span>
                     <span className="order-3 col-span-2 sm:order-none sm:col-span-1">
-                      <span className="flex h-2 overflow-hidden rounded-[2px]" style={{ width: `${Math.max(1.5, (o.vigente / max) * 100)}%` }}>
+                      <span className="flex h-3 overflow-hidden rounded-[2px] ring-1 ring-hue/30 ring-inset" style={{ width: `${Math.max(1.5, (o.vigente / max) * 100)}%` }}>
                         <span className="h-full bg-hue" style={{ width: `${(o.devengado / o.vigente) * 100}%` }} />
                         <span className="h-full flex-1 bg-hue-soft" />
                       </span>
@@ -132,10 +140,7 @@ export default function Congreso() {
           <GastoEnVivo
             porSegundo={r.porSegundo}
             provincia={mayorGasto(filas, "distrito")}
-            bloque={(() => {
-              const b = mayorGasto(filas, "bloque");
-              return b && { ...b, nombre: bloqueLegible(b.nombre) };
-            })()}
+            partidos={gastoPorBloque(filas).map((b) => (b.fusion ? b : { ...b, nombre: bloqueLegible(b.nombre) }))}
           />
           <Tarjeta
             titulo="En qué se gasta"

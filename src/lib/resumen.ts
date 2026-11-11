@@ -92,3 +92,28 @@ export function mayorGasto(filas: Fila[], clave: "distrito" | "bloque") {
   const top = [...m.values()].sort((a, b) => b.mensual - a.mensual)[0];
   return top ? { ...top, share: top.mensual / total } : null;
 }
+
+/** Bloques que se muestran sumados bajo un mismo nombre (clave: nombre del bloque en mayúsculas). */
+const FUSIONES: Record<string, string> = {
+  JUSTICIALISTA: "Kukas (Justicialista + Unión por la Patria)",
+  "UNIÓN POR LA PATRIA": "Kukas (Justicialista + Unión por la Patria)",
+};
+
+/** Los bloques con más miembros, ordenados por gasto por miembro (dietas y asesores, por mes). */
+export function gastoPorBloque(filas: Fila[], cuantos = 5) {
+  const m = new Map<string, { nombre: string; mensual: number; cantidad: number; fusion: boolean }>();
+  for (const f of filas) {
+    const original = f.bloque.trim().toUpperCase();
+    const fusion = FUSIONES[original];
+    const k = fusion ?? original;
+    const r = m.get(k) ?? { nombre: fusion ?? f.bloque.trim(), mensual: 0, cantidad: 0, fusion: !!fusion };
+    r.mensual += f.dietaMensual + f.asesoresMensual;
+    r.cantidad++;
+    m.set(k, r);
+  }
+  return [...m.values()]
+    .sort((a, b) => b.cantidad - a.cantidad || b.mensual - a.mensual)
+    .slice(0, cuantos)
+    .map((b) => ({ ...b, porMiembro: b.mensual / b.cantidad }))
+    .sort((a, b) => b.porMiembro - a.porMiembro);
+}

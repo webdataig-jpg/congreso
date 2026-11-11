@@ -9,7 +9,7 @@ export function Canvas({ children }: { children: React.ReactNode }) {
   return <main className="mx-auto w-full max-w-[1240px] px-4 pt-5 pb-16 sm:px-6 lg:px-8 lg:pt-9">{children}</main>;
 }
 
-export function Titulo({ titulo, sub, derecha }: { titulo: string; sub?: React.ReactNode; derecha?: React.ReactNode }) {
+export function Titulo({ titulo, sub, derecha }: { titulo: React.ReactNode; sub?: React.ReactNode; derecha?: React.ReactNode }) {
   return (
     <div className="mb-6 flex flex-wrap items-end justify-between gap-x-6 gap-y-2">
       <div className="min-w-0 max-w-3xl">
@@ -63,7 +63,7 @@ export function VerTodo({ href, children }: { href: string; children: React.Reac
 
 /** Muestra de leyenda: el mismo trazo que la marca que explica. */
 export function Muestra({ className }: { className: string }) {
-  return <span aria-hidden className={`inline-block h-2 w-3 rounded-[2px] align-middle ${className}`} />;
+  return <span aria-hidden className={`inline-block shrink-0 rounded-[2px] align-middle ${/h-\d/.test(className) ? "" : "h-2 w-3"} ${className}`} />;
 }
 
 export function Avatar({ foto, nombre, apellido, size = 32 }: { foto: string | null; nombre: string; apellido: string; size?: number }) {

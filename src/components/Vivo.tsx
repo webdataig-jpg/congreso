@@ -14,16 +14,16 @@ const SEG_POR_MES = (365 * 86400) / 12;
 
 /**
  * Lo que gasta el Congreso mientras la página está abierta, al ritmo de su presupuesto vigente,
- * más la provincia y el bloque que más suman en dietas y asesores. Tarjeta resaltada en amarillo.
+ * más la provincia que más suma en dietas y asesores y el gasto por miembro de los bloques más grandes. Tarjeta resaltada en amarillo.
  */
 export function GastoEnVivo({
   porSegundo,
   provincia,
-  bloque,
+  partidos,
 }: {
   porSegundo: number;
   provincia: MayorGasto | null;
-  bloque: MayorGasto | null;
+  partidos: { nombre: string; cantidad: number; mensual: number; porMiembro: number }[];
 }) {
   const [segundos, setSegundos] = useState(0);
 
@@ -59,13 +59,49 @@ export function GastoEnVivo({
           <span className="num font-medium text-vivo-ink">{$(porSegundo)}</span> por segundo según su presupuesto.
         </p>
 
-        {(provincia || bloque) && (
+        {provincia && (
           <dl className="mt-3 border-t border-vivo-rule">
-            {provincia && <Lider etiqueta="Provincia que más gasta" dato={provincia} segundos={segundos} unidad="legisladores" />}
-            {bloque && <Lider etiqueta="Bloque que más gasta" dato={bloque} segundos={segundos} unidad="miembros" />}
+            <Lider etiqueta="Provincia que más gasta" dato={provincia} segundos={segundos} unidad="legisladores" />
           </dl>
         )}
-        <p className="mt-2 text-[12px] leading-4 text-vivo-muted">En dietas y asesores de sus legisladores, sumando las dos cámaras.</p>
+
+        {partidos.length > 0 && (
+          <div className="mt-3">
+            <p className="text-[12px] text-vivo-muted">Gasto por partido según cantidad de miembros</p>
+            <table className="mt-1 w-full table-fixed text-[13px]">
+              <colgroup>
+                <col />
+                <col className="w-24" />
+              </colgroup>
+              <thead className="sr-only">
+                <tr>
+                  <th>Bloque, miembros y gasto mensual</th>
+                  <th>Gasto por miembro</th>
+                </tr>
+              </thead>
+              <tbody>
+                {partidos.map((p) => (
+                  <tr key={p.nombre} className="border-b border-vivo-rule">
+                    <td className="py-1.5 pr-2">
+                      <span className="block font-bold text-pretty">{p.nombre}</span>
+                      <span className="block text-[12px] text-vivo-muted">
+                        <span className="num">{p.cantidad}</span> miembros · <span className="num">{$corto(p.mensual)}</span> por mes
+                      </span>
+                    </td>
+                    <td className="py-1.5 text-right align-top whitespace-nowrap">
+                      <span className="num block font-bold text-vivo-red">{$corto(p.porMiembro)}</span>
+                      <span className="block text-[12px] text-vivo-muted">por miembro</span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+        <p className="mt-2 text-[12px] leading-4 text-vivo-muted">
+          En dietas y asesores, sumando las dos cámaras. Un senador cuesta más que un diputado, así que los bloques con senadores dan
+          más por miembro.
+        </p>
       </div>
     </section>
   );
