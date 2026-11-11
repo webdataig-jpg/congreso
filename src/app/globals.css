@@ -2,7 +2,7 @@
 
 /*
   Estilo: papel y azul marino. Barra lateral marino, fondo de papel cálido, tinta azul oscura;
-  el celeste (--hue) marca el dato principal de cada bloque. Sin sombras en reposo, sin degradés.
+  el celeste (--hue) marca el dato principal de cada bloque. Tarjetas con sombra en capas para dar volumen; sin degradés.
 */
 :root {
   --ground: #f4f1ea;
@@ -31,6 +31,7 @@
   --side-hover: #24375a;
   --side-active: #2f4670;
   --side-accent: #7db8ee;
+  --sombra-tarjeta: 0 1px 1px rgb(23 32 51 / 0.05), 0 3px 6px -1px rgb(23 32 51 / 0.08), 0 12px 24px -8px rgb(23 32 51 / 0.18);
   /* Tarjeta "En vivo": resaltada en amarillo, el monto en rojo */
   --vivo-bg: #ffe066;
   --vivo-border: #e0b400;
@@ -68,6 +69,7 @@
     --side-hover: #121c2f;
     --side-active: #1b2a45;
     --side-accent: #6fb1ee;
+    --sombra-tarjeta: 0 1px 1px rgb(0 0 0 / 0.35), 0 4px 8px -1px rgb(0 0 0 / 0.4), 0 14px 28px -8px rgb(0 0 0 / 0.6);
     --vivo-bg: #f2d04b;
     --vivo-border: #f2d04b;
     --vivo-rule: #d4b236;
@@ -101,6 +103,7 @@
   --color-side-muted: var(--side-muted);
   --color-side-hover: var(--side-hover);
   --color-side-active: var(--side-active);
+  --shadow-tarjeta: var(--sombra-tarjeta);
   --color-vivo-bg: var(--vivo-bg);
   --color-vivo-border: var(--vivo-border);
   --color-vivo-ink: var(--vivo-ink);

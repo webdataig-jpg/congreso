@@ -28,6 +28,7 @@ export function Tarjeta({
   className = "",
   pie,
   id,
+  cuerpoClassName = "",
 }: {
   titulo?: React.ReactNode;
   meta?: React.ReactNode;
@@ -35,16 +36,17 @@ export function Tarjeta({
   className?: string;
   pie?: React.ReactNode;
   id?: string;
+  cuerpoClassName?: string;
 }) {
   return (
-    <section id={id} className={`flex min-w-0 flex-col rounded-lg border border-border bg-surface ${className}`}>
+    <section id={id} className={`flex min-w-0 flex-col rounded-lg border border-border bg-surface shadow-tarjeta ${className}`}>
       {(titulo || meta) && (
         <header className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 px-5 pt-4 pb-3">
           {titulo && <h2 className="text-[16px] leading-6 font-medium">{titulo}</h2>}
           {meta && <div className="text-[12px] text-muted">{meta}</div>}
         </header>
       )}
-      <div className="flex-1 px-5 pb-4">{children}</div>
+      <div className={`flex-1 px-5 pb-4 ${cuerpoClassName}`}>{children}</div>
       {pie && <footer className="border-t border-rule px-5 py-3 text-[13px]">{pie}</footer>}
     </section>
   );

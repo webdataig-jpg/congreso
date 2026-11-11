@@ -1,11 +1,11 @@
 import datosJson from "../../data/legisladores.json";
 import type { Datos } from "@/lib/tipos";
-import { construirFilas, costoLegisladores, gastoPorBloque, mayorGasto, recambios, resumenCongreso } from "@/lib/resumen";
+import { construirFilas, costoLegisladores, gastoPorGrupo, resumenCongreso } from "@/lib/resumen";
 import Link from "next/link";
 import { $, $corto, bloqueLegible, fecha, int, millones, pct } from "@/lib/formato";
 import { Avatar, Canvas, Muestra, Tarjeta, Titulo, VerTodo } from "@/components/ui";
 import { GastoEnVivo } from "@/components/Vivo";
-import { DiasHasta, MejorCalificados, type Mini } from "@/components/Ranking";
+import { MejorCalificados, type Mini } from "@/components/Ranking";
 
 const datos = datosJson as unknown as Datos;
 
@@ -13,8 +13,6 @@ export default function Congreso() {
   const r = resumenCongreso(datos);
   const filas = construirFilas(datos);
   const leg = costoLegisladores(filas);
-  const generado = Date.parse(datos.generado);
-  const proximos = recambios(filas, generado).slice(0, 3);
   const caros = filas
     .filter((f) => f.camara === "senadores")
     .sort((a, b) => b.dietaMensual + b.asesoresMensual - (a.dietaMensual + a.asesoresMensual))
@@ -61,7 +59,7 @@ export default function Congreso() {
       />
 
       {/* Cifras clave: un solo contenedor dividido */}
-      <section aria-label="Cifras clave" className="grid grid-cols-2 rounded-lg border border-border bg-surface lg:grid-cols-[1.3fr_repeat(4,1fr)]">
+      <section aria-label="Cifras clave" className="grid grid-cols-2 rounded-lg border border-border bg-surface shadow-tarjeta lg:grid-cols-[1.3fr_repeat(4,1fr)]">
         <Cifra etiqueta={`Presupuesto ${r.ejercicio}`} valor={millones(r.vigente)} nota={`Inicial: ${millones(r.presupuestado)}`} lider />
         <Cifra
           etiqueta="Ya gastado"
@@ -77,6 +75,7 @@ export default function Congreso() {
         {/* Bloque principal: el presupuesto por organismo */}
         <Tarjeta
           className="lg:col-span-8"
+          cuerpoClassName="flex flex-col"
           titulo="Presupuesto por organismo"
           pie={
             <span className="flex flex-wrap justify-between gap-x-6 gap-y-1">
@@ -111,13 +110,13 @@ export default function Congreso() {
             <span className="text-right">Del total</span>
           </div>
           {grupos.map(({ grupo, items }) => (
-            <div key={grupo} className="mt-2 first-of-type:mt-0">
+            <div key={grupo} className="mt-2 flex flex-col first-of-type:mt-0" style={{ flexGrow: items.length }}>
               <p className="pt-2 pb-1 text-[12px] text-muted">{grupo}</p>
-              <ul>
+              <ul className="flex flex-1 flex-col">
                 {items.map((o) => (
                   <li
                     key={o.id}
-                    className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-4 gap-y-1.5 border-t border-rule py-[11px] sm:grid-cols-[minmax(0,1.5fr)_minmax(0,2fr)_6.5rem_3.5rem]"
+                    className="grid flex-1 grid-cols-[minmax(0,1fr)_auto] content-center items-center gap-x-4 gap-y-1.5 border-t border-rule py-[11px] sm:grid-cols-[minmax(0,1.5fr)_minmax(0,2fr)_6.5rem_3.5rem]"
                     title={`${o.nombre}: vigente ${millones(o.vigente)}, gastado ${millones(o.devengado)}, falta gastar ${millones(o.vigente - o.devengado)}`}
                   >
                     <span className="truncate">{o.corto}</span>
@@ -136,55 +135,39 @@ export default function Congreso() {
           ))}
         </Tarjeta>
 
-        <div className="flex flex-col gap-3 lg:col-span-4">
+        <div className="lg:col-span-4">
           <GastoEnVivo
             porSegundo={r.porSegundo}
-            provincia={mayorGasto(filas, "distrito")}
-            partidos={gastoPorBloque(filas).map((b) => (b.fusion ? b : { ...b, nombre: bloqueLegible(b.nombre) }))}
+            provincias={gastoPorGrupo(filas, "distrito")}
+            partidos={gastoPorGrupo(filas, "bloque").map((b) => (b.fusion ? b : { ...b, nombre: bloqueLegible(b.nombre) }))}
           />
-          <Tarjeta
-            titulo="En qué se gasta"
-            meta="del presupuesto vigente"
-          >
-            <ul>
-              {r.incisos.map((i, k) => (
-                <li key={i.nombre} className="border-t border-rule py-2 first:border-t-0">
-                  <span className="flex justify-between gap-3">
-                    <span className="truncate">{i.nombre}</span>
-                    <span className="num shrink-0">{pct(i.vigente / r.vigente)}</span>
-                  </span>
-                  <span className="mt-1.5 block h-1.5 rounded-[2px] bg-raised">
-                    <span
-                      className={`block h-full rounded-[2px] ${k === 0 ? "bg-hue" : "bg-ink/70"}`}
-                      style={{ width: `${Math.max(0.6, (i.vigente / r.vigente) * 100)}%` }}
-                    />
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </Tarjeta>
-          <Tarjeta titulo="Próximos recambios" meta="fin de mandato">
-            <ul>
-              {proximos.map((p) => (
-                <li key={p.fin} className="flex items-center justify-between gap-4 border-t border-rule py-3 first:border-t-0">
-                  <span>
-                    <span className="block font-medium">{fecha(p.fin)}</span>
-                    <span className="block text-[12px] text-muted">
-                      {[p.diputados && `${p.diputados} diputados`, p.senadores && `${p.senadores} senadores`].filter(Boolean).join(" · ")}
-                    </span>
-                  </span>
-                  <span className="text-right">
-                    <DiasHasta fin={p.fin} desde={generado} />
-                    <span className="block text-[12px] text-muted">días</span>
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </Tarjeta>
-          </div>
+        </div>
 
-        {/* Los legisladores dentro del total */}
-        <Tarjeta className="lg:col-span-4" titulo="Dietas y asesores en el total" meta="por año" pie={<VerTodo href="/como-se-calcula">Cómo se calcula</VerTodo>}>
+        {/* Fila: en qué se gasta y los legisladores dentro del total */}
+        <Tarjeta
+          className="lg:col-span-6"
+          titulo="En qué se gasta"
+          meta="del presupuesto vigente"
+        >
+          <ul>
+            {r.incisos.map((i, k) => (
+              <li key={i.nombre} className="border-t border-rule py-2 first:border-t-0">
+                <span className="flex justify-between gap-3">
+                  <span className="truncate">{i.nombre}</span>
+                  <span className="num shrink-0">{pct(i.vigente / r.vigente)}</span>
+                </span>
+                <span className="mt-1.5 block h-1.5 rounded-[2px] bg-raised">
+                  <span
+                    className={`block h-full rounded-[2px] ${k === 0 ? "bg-hue" : "bg-ink/70"}`}
+                    style={{ width: `${Math.max(0.6, (i.vigente / r.vigente) * 100)}%` }}
+                  />
+                </span>
+              </li>
+            ))}
+          </ul>
+        </Tarjeta>
+
+        <Tarjeta className="lg:col-span-6" titulo="Dietas y asesores en el total" meta="por año" pie={<VerTodo href="/como-se-calcula">Cómo se calcula</VerTodo>}>
           <div className="flex h-3 overflow-hidden rounded-[2px]" role="img" aria-label={`Dietas y asesores: ${pct(shareLeg)} del presupuesto del Congreso`}>
             <span className="h-full bg-hue" style={{ width: `${shareLeg * 100}%` }} />
             <span className="h-full flex-1 bg-raised" />
@@ -216,7 +199,7 @@ export default function Congreso() {
         </Tarjeta>
 
 
-        <Tarjeta className="lg:col-span-4" titulo="Los senadores que más cuestan" meta="por mes" pie={<VerTodo href="/senadores">Ver los {datos.senadores.lista.length} senadores</VerTodo>}>
+        <Tarjeta className="lg:col-span-6" titulo="Los senadores que más cuestan" meta="por mes" pie={<VerTodo href="/senadores">Ver los {datos.senadores.lista.length} senadores</VerTodo>}>
           <ol>
             {caros.map((f, i) => (
               <li key={f.id} className="border-t border-rule first:border-t-0">
@@ -242,7 +225,7 @@ export default function Congreso() {
           </ol>
         </Tarjeta>
 
-        <Tarjeta className="lg:col-span-4" titulo="Mejor calificados" meta="por los visitantes" pie={<VerTodo href="/diputados">Calificar a un legislador</VerTodo>}>
+        <Tarjeta className="lg:col-span-6" titulo="Mejor calificados" meta="por los visitantes" pie={<VerTodo href="/diputados">Calificar a un legislador</VerTodo>}>
           <MejorCalificados lista={mini} />
         </Tarjeta>
       </div>
