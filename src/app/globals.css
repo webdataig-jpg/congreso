@@ -31,6 +31,13 @@
   --side-hover: #24375a;
   --side-active: #2f4670;
   --side-accent: #7db8ee;
+  /* Tarjeta "En vivo": resaltada en amarillo, el monto en rojo */
+  --vivo-bg: #ffe066;
+  --vivo-border: #e0b400;
+  --vivo-ink: #1f1a05;
+  --vivo-muted: #4d4212;
+  --vivo-rule: #e8c440;
+  --vivo-red: #b3261e;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -61,6 +68,10 @@
     --side-hover: #121c2f;
     --side-active: #1b2a45;
     --side-accent: #6fb1ee;
+    --vivo-bg: #f2d04b;
+    --vivo-border: #f2d04b;
+    --vivo-rule: #d4b236;
+    --vivo-red: #a3211a;
   }
 }
 
@@ -90,6 +101,12 @@
   --color-side-muted: var(--side-muted);
   --color-side-hover: var(--side-hover);
   --color-side-active: var(--side-active);
+  --color-vivo-bg: var(--vivo-bg);
+  --color-vivo-border: var(--vivo-border);
+  --color-vivo-ink: var(--vivo-ink);
+  --color-vivo-muted: var(--vivo-muted);
+  --color-vivo-rule: var(--vivo-rule);
+  --color-vivo-red: var(--vivo-red);
   --color-side-accent: var(--side-accent);
   --font-sans: var(--font-geist), Inter, system-ui, sans-serif;
 }

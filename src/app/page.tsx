@@ -1,6 +1,6 @@
 import datosJson from "../../data/legisladores.json";
 import type { Datos } from "@/lib/tipos";
-import { construirFilas, costoLegisladores, recambios, resumenCongreso } from "@/lib/resumen";
+import { construirFilas, costoLegisladores, mayorGasto, recambios, resumenCongreso } from "@/lib/resumen";
 import Link from "next/link";
 import { $, $corto, bloqueLegible, fecha, int, millones, pct } from "@/lib/formato";
 import { Avatar, Canvas, Muestra, Tarjeta, Titulo, VerTodo } from "@/components/ui";
@@ -129,9 +129,14 @@ export default function Congreso() {
         </Tarjeta>
 
         <div className="flex flex-col gap-3 lg:col-span-4">
-          <Tarjeta titulo="En vivo">
-            <GastoEnVivo porSegundo={r.porSegundo} />
-          </Tarjeta>
+          <GastoEnVivo
+            porSegundo={r.porSegundo}
+            provincia={mayorGasto(filas, "distrito")}
+            bloque={(() => {
+              const b = mayorGasto(filas, "bloque");
+              return b && { ...b, nombre: bloqueLegible(b.nombre) };
+            })()}
+          />
           <Tarjeta
             titulo="En qué se gasta"
             meta="del presupuesto vigente"

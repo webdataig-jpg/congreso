@@ -75,3 +75,20 @@ export function recambios(filas: Fila[], ahora: number) {
 }
 
 export { construirFilas };
+
+/** Distrito o bloque que más suma en dietas y asesores (pesos por mes), con su peso sobre el total. */
+export function mayorGasto(filas: Fila[], clave: "distrito" | "bloque") {
+  const m = new Map<string, { nombre: string; mensual: number; cantidad: number }>();
+  let total = 0;
+  for (const f of filas) {
+    const k = f[clave].trim().toUpperCase();
+    const r = m.get(k) ?? { nombre: f[clave].trim(), mensual: 0, cantidad: 0 };
+    const v = f.dietaMensual + f.asesoresMensual;
+    r.mensual += v;
+    r.cantidad++;
+    total += v;
+    m.set(k, r);
+  }
+  const top = [...m.values()].sort((a, b) => b.mensual - a.mensual)[0];
+  return top ? { ...top, share: top.mensual / total } : null;
+}
